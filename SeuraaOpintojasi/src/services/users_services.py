@@ -1,7 +1,5 @@
-from repositories.users_repository import UsersRepository as default_users_repository
+from repositories.users_repository import UsersRepository as default_users_repository, repository
 from entities.users import Users
-from repositories.users_repository import repository
-
 
 class UsersServices:
     """ Käyttäjien hallinnoinnista vastaava luokka

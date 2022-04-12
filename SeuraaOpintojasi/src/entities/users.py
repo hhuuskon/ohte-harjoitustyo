@@ -1,7 +1,7 @@
 """ Käyttäjän ilmentymän luominen
 """
 
-class Users: # pylint: disable=too-few-public-methods
+class Users:
     """ Yksittäisen käyttäjän ilmentymää kuvaava luokka
     """
 

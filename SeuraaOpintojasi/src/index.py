@@ -1,10 +1,6 @@
 from tkinter import Tk
 from ui.ui import UserInterface
 
-""" Ohjelman käynnistykseen liittyvät toiminnallisuudet.
-"""
-
-
 def main():
     """ Käynnistää graafien käyttöliittymän
     """

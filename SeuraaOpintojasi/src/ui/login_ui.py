@@ -11,24 +11,24 @@ class LoginUi:
         self._password_entry = None
         self._handle_show_tracking_view = handle_show_tracking_view
         self._handle_show_sign_up_view = handle_show_sign_up_view
-        self._frame = None # pylint: disable=duplicate-code
+        self._frame = None
 
         self._initialize()
 
-    def pack(self): # pylint: disable=duplicate-code
+    def pack(self):
         """ Tkinter toiminnallisuus
         """
         self._frame.pack(fill=constants.X)
 
-    def destroy(self): # pylint: disable=duplicate-code
+    def destroy(self):
         """ Tkinter toiminnallisuus
         """
-        self._frame.destroy() # pylint: disable=duplicate-code
+        self._frame.destroy()
 
     def _initialize(self):
         """ Alustaa graafisen näkymän
         """
-        self._frame = ttk.Frame(master=self._root) # pylint: disable=duplicate-code
+        self._frame = ttk.Frame(master=self._root)
         self._login()
 
     def _login_click(self):
@@ -48,21 +48,21 @@ class LoginUi:
         headertext = "Tervetuloa seuraamaan opintojasi"
         logintext = "Kirjaudu sisään"
         signuptext = "Luo uusi tunnus"
-        usernametext = "Käyttäjätunnus" # pylint: disable=duplicate-code
-        passwordtext = "Salasana" # pylint: disable=duplicate-code
+        usernametext = "Käyttäjätunnus"
+        passwordtext = "Salasana"
 
-        welcome_label = ttk.Label(master=self._frame, text=headertext) # pylint: disable=duplicate-code
-        welcome_label.grid(row=0, column=0) # pylint: disable=duplicate-code
+        welcome_label = ttk.Label(master=self._frame, text=headertext)
+        welcome_label.grid(row=0, column=0)
 
-        username_label = ttk.Label(master=self._frame, text=usernametext) # pylint: disable=duplicate-code
-        self._username_entry = ttk.Entry(master=self._frame) # pylint: disable=duplicate-code
-        username_label.grid(row=1, column=0) # pylint: disable=duplicate-code
-        self._username_entry.grid(row=1, column=1) # pylint: disable=duplicate-code
+        username_label = ttk.Label(master=self._frame, text=usernametext)
+        self._username_entry = ttk.Entry(master=self._frame)
+        username_label.grid(row=1, column=0)
+        self._username_entry.grid(row=1, column=1)
 
-        password_label = ttk.Label(master=self._frame, text=passwordtext) # pylint: disable=duplicate-code
-        self._password_entry = ttk.Entry(master=self._frame) # pylint: disable=duplicate-code
-        password_label.grid(row=2, column=0) # pylint: disable=duplicate-code
-        self._password_entry.grid(row=2, column=1) # pylint: disable=duplicate-code
+        password_label = ttk.Label(master=self._frame, text=passwordtext)
+        self._password_entry = ttk.Entry(master=self._frame)
+        password_label.grid(row=2, column=0)
+        self._password_entry.grid(row=2, column=1)
 
         login_button = ttk.Button(
             master=self._frame, text=logintext, command=self._login_click)

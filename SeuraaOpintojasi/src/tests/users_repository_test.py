@@ -1,13 +1,21 @@
+import sqlite3
 import unittest
-from repositories.users_repository import UsersRepository
 from entities.users import Users
+from repositories.users_repository import UsersRepository
+from repositories.users_repository import repository
 
 
 class TestUsersRepository(unittest.TestCase):
     def setUp(self):
-        UsersRepository.drop_tables()
-        UsersRepository.initialize_database()
+        self.db = sqlite3.connect("test.db")
+        self.db.isolation_level = None
+        repository.initialize_database()
         self.user = Users('Erkki', 'Esimerkki')
 
     def test_sign_up_db(self):
-        UsersRepository.sign_up_db(self.user)
+        result = repository.sign_up_db(self.user)
+        self.assertEqual(True, result)
+
+
+
+    

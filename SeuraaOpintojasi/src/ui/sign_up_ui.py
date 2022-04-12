@@ -19,7 +19,7 @@ class SignUpUi:
 
         self._initialize()
 
-    def pack(self): # pylint: disable=duplicate-code
+    def pack(self):
         """ Tkinter toiminnallisuus
         """
         self._frame.pack(fill=constants.X)
