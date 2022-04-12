@@ -1,8 +1,15 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 from services.users_services import services
 
 class SignUpUi:
+    """ Käyttäjätunnuksen käyttöliittymän luokka
+    """
     def __init__(self, root, handle_show_tracking_view, handle_show_login_view):
+        """
+        Args:
+        handle_show_tracking_view: Ohjaaminen päänäkymään
+        handle_show_login_view: Ohjaaminen kirjautumisnäkymään
+        """
         self._root = root
         self._username_entry = None
         self._password_entry = None
@@ -12,13 +19,19 @@ class SignUpUi:
 
         self._initialize()
 
-    def pack(self):
+    def pack(self): # pylint: disable=duplicate-code
+        """ Tkinter toiminnallisuus
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """ Tkinter toiminnallisuus
+        """
         self._frame.destroy()
 
     def _initialize(self):
+        """ Alustaa graafisen näkymän
+        """
         self._frame = ttk.Frame(master=self._root)
         self._sign_up()
 
@@ -55,8 +68,10 @@ class SignUpUi:
         password_label.grid(row=2, column=0)
         self._password_entry.grid(row=2, column=1)
 
-        sign_up_button = ttk.Button(master=self._frame, text=signuptext, command=self._sign_up_click)
+        sign_up_button = ttk.Button(
+            master=self._frame, text=signuptext, command=self._sign_up_click)
         sign_up_button.grid(row=4, column=0, columnspan=2)
 
-        already_user_button = ttk.Button(master=self._frame, text=alreadyusertext, command=self._handle_show_login_view)
+        already_user_button = ttk.Button(
+            master=self._frame, text=alreadyusertext, command=self._handle_show_login_view)
         already_user_button.grid(row=5, column=0, columnspan=2)

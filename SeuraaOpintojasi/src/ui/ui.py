@@ -6,7 +6,10 @@ from ui.tracking_ui import TrackingUi
     Näkymät vaihtelevat sen mukaan mitä osaa ohjelmasta käytetään
 """
 
+
 class UserInterface:
+    """ Käyttöliittymän näkymien hallinnoinnin luokka
+    """
     def __init__(self, root):
         self._root = root
         self._current_view = None
@@ -27,7 +30,8 @@ class UserInterface:
         """ Näyttää kirjautumisnäkymän
         """
         self._hide_current_view()
-        self._current_view = LoginUi(self._root, self._show_tracking_view, self._show_sign_up_view)
+        self._current_view = LoginUi(
+            self._root, self._show_tracking_view, self._show_sign_up_view)
 
         self._current_view.pack()
 
@@ -35,7 +39,8 @@ class UserInterface:
         """ Näyttää käyttäjätunnusten luomisen näkymän
         """
         self._hide_current_view()
-        self._current_view = SignUpUi(self._root, self._show_tracking_view, self._show_login_view)
+        self._current_view = SignUpUi(
+            self._root, self._show_tracking_view, self._show_login_view)
 
         self._current_view.pack()
 

@@ -1,6 +1,9 @@
 import sqlite3
 
+
 class UsersRepository:
+    """ Tietokannan toiminnallisuuksien luokka
+    """
 
     def __init__(self, connection):
         """
@@ -41,10 +44,11 @@ class UsersRepository:
         """
         try:
             sql = "INSERT INTO users (username, password) VALUES (:username,:password)"
-            self.db.execute(sql, {"username": user.username, "password": user.password})
+            self.db.execute(
+                sql, {"username": user.username, "password": user.password})
             self.db.commit()
-        except Exception as e:
-            print(e)
+        except Exception as error:
+            print(error)
             return False
         return True
 
@@ -59,12 +63,12 @@ class UsersRepository:
 
             sql = "SELECT username, password FROM users WHERE username=:username"
             result = self.db.execute(sql, {"username": username})
-            user_check = result.fetchone()   
+            user_check = result.fetchone()
             if user_check[0] == username and user_check[1] == password:
                 return True
-            else:
-                return False
-        except Exception as e:
-            print(e)
+            return False
+        except Exception as error:
+            print(error)
+
 
 repository = UsersRepository("db.db")

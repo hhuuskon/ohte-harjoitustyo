@@ -1,7 +1,10 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 from services.users_services import services
 
+
 class TrackingUi:
+    """ Päänäkymän käyttöliittymän luokka
+    """
     def __init__(self, root, handle_show_login_view):
         self._root = root
         self._root.geometry("500x500")
@@ -10,13 +13,19 @@ class TrackingUi:
 
         self._initialize()
 
-    def pack(self):
+    def pack(self): # pylint: disable=duplicate-code
+        """ Tkinter toiminnallisuus
+        """
         self._frame.pack(fill=constants.X)
 
-    def destroy(self):
+    def destroy(self): # pylint: disable=duplicate-code
+        """ Tkinter toiminnallisuus
+        """
         self._frame.destroy()
 
     def _initialize(self):
+        """ Alustaa graafisen näkymän
+        """
         self._frame = ttk.Frame(master=self._root)
         self._tracking()
 
@@ -30,8 +39,9 @@ class TrackingUi:
     def _tracking(self):
         """ Päänäkymän graaffiset elementit tulevat tähän myöhemmin.
         """
-        
+
         logouttext = "Logout"
 
-        test_button = ttk.Button(master=self._frame, text=logouttext, command=self._handle_show_login_view)
+        test_button = ttk.Button(
+            master=self._frame, text=logouttext, command=self._handle_show_login_view)
         test_button.grid(row=3, column=0, columnspan=2)

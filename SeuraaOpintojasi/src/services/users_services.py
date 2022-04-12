@@ -2,10 +2,14 @@ from repositories.users_repository import UsersRepository as default_users_repos
 from entities.users import Users
 from repositories.users_repository import repository
 
+
 class UsersServices:
     """ Käyttäjien hallinnoinnista vastaava luokka
     """
-    def __init__(self, users_repository = default_users_repository):
+
+    def __init__(self, users_repository=default_users_repository):
+        """ Käyttäjän kirjautumisen hallintaa.
+        """
         self._user = None
         self._users_repository = users_repository
 
@@ -21,8 +25,7 @@ class UsersServices:
         if login:
             self._user = user
             return True
-        else:
-            return False
+        return False
 
     def login(self, username, password):
         """ Käyttäjän sisäänkirjautuminen
@@ -37,8 +40,7 @@ class UsersServices:
             self._user = user
 
             return True
-        else:
-            return False
+        return False
 
     def logout(self):
         """ Kirjaa käyttäjän ulos
@@ -47,5 +49,4 @@ class UsersServices:
         return True
 
 
-        
 services = UsersServices()
