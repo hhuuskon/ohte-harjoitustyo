@@ -8,5 +8,5 @@
 - 09.04.2022 | Tietokannan uudelleen järjestely ja toiminnan varmistaminen 6h
 - 10.04.2022 | Käyttöliittymä näkymien lisääminen ja käyttäjätunnuksen luomisen viimeistely 6h
 - 12.04.2022 | Lisätty ominaisuudet jolla käyttäjä voi kirjautua sisään ja ulos sovelluksesta 5h
-
-Yhteensä: 33h
+- 12.04.2022 | Projektille asetettujen laatumääritysten parantaminen. 4h
+Yhteensä: 37h
