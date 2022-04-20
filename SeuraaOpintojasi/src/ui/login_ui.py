@@ -36,6 +36,9 @@ class LoginUi:
         """
         username = self._username_entry.get()
         password = self._password_entry.get()
+        if len(password) == 0 or len(username) == 0:
+            self.error_message("Yritit syöttää tyhjän merkkijonon. Syötä käyttäjätunnus ja salasana.")
+            return
         login = services.login(username, password)
 
         if login:

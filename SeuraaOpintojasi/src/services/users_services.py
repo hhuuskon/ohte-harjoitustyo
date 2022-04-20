@@ -18,6 +18,8 @@ class UsersServices:
         password: Salasana jonka käyttäjä syöttää
         """
         user = Users(username, password)
+        if repository.existing_user_db(username):
+            return False    
         login = repository.sign_up_db(user)
 
         if login:
@@ -45,6 +47,7 @@ class UsersServices:
         """
         self._user = None
         return True
+
 
 
 services = UsersServices()

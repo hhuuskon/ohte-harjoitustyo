@@ -70,5 +70,19 @@ class UsersRepository:
         except Exception as error:
             print(error)
 
+    def existing_user_db(self, username):
+
+        try:
+
+            sql = "SELECT username FROM users WHERE username=:username"
+            result = self.db.execute(sql, {"username": username})
+            existing_check = result.fetchone()
+            if existing_check == username:
+                return True
+            else:
+                return False
+        except Exception as error:
+            print(error)
+
 
 repository = UsersRepository("db.db")

@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import StringVar, ttk, constants
 from services.users_services import services
 
 class SignUpUi:
@@ -16,6 +16,9 @@ class SignUpUi:
         self._handle_show_tracking_view = handle_show_tracking_view
         self._handle_show_login_view = handle_show_login_view
         self._frame = None
+        self._error_variable = None
+        self._error_label = None
+        self._login = False
 
         self._initialize()
 
@@ -29,10 +32,17 @@ class SignUpUi:
         """
         self._frame.destroy()
 
+    def error_message(self, message):
+        self._error_variable.set(message)
+        self._error_label.grid()
+
+
     def _initialize(self):
         """ Alustaa graafisen näkymän
         """
         self._frame = ttk.Frame(master=self._root)
+        self._error_variable = StringVar(self._frame)
+        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable)
         self._sign_up()
 
     def _sign_up_click(self):
@@ -40,10 +50,17 @@ class SignUpUi:
         """
         username = self._username_entry.get()
         password = self._password_entry.get()
-        login = services.sign_up(username, password)
+        if len(password) == 0 or len(username) == 0:
+            self.error_message("Yritit syöttää tyhjän merkkijonon. Syötä käyttäjätunnus ja salasana.")
+            return
+        
+        self._login = services.sign_up(username, password)
 
-        if login:
+        if self._login:
             self._handle_show_tracking_view()
+        else:
+            self.error_message("Käyttäjätunnus saattaa olla jo käytössä.")
+
 
     def _sign_up(self):
         """ Käyttäjätunnuksen luomisen graafiset elementit. Tekstit ja painikkeet.
