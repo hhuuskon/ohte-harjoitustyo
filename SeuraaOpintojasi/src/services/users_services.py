@@ -19,9 +19,8 @@ class UsersServices:
         """
         user = Users(username, password)
         if repository.existing_user_db(username):
-            return False    
+            return False
         login = repository.sign_up_db(user)
-
         if login:
             self._user = user
             return True

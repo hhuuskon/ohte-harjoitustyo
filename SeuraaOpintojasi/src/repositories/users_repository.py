@@ -19,6 +19,7 @@ class UsersRepository:
         """ Poistaa olemassaolevan tietokannan
         """
         self.db.execute('''DROP TABLE IF EXISTS users;''')
+        self.db.execute('''DROP TABLE IF EXISTS courses;''')
         self.db.commit()
 
     def initialize_database(self):
@@ -30,6 +31,15 @@ class UsersRepository:
         id SERIAL PRIMARY KEY,
         username TEXT UNIQUE,
         password TEXT
+        );
+        ''')
+
+        self.db.execute('''
+        CREATE TABLE courses (
+        id SERIAL PRIMARY KEY,
+        course TEXT,
+        time INTEGER,
+        user_id INTEGER REFERENCES users
         );
         ''')
 
@@ -79,8 +89,6 @@ class UsersRepository:
             existing_check = result.fetchone()
             if existing_check[0] == username:
                 return True
-            else:
-                return False
         except Exception as error:
             print(error)
 

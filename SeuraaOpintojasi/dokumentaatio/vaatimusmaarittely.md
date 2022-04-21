@@ -9,7 +9,7 @@ Sovellusta käytetään normaalina käyttäjänä. Myöhemmässä vaiheessa sove
 ## Sovelluksen ominaisuudet:
 - Graafinen käyttöliittymä
 - Käyttäjä voi luoda järjestelmään käyttäjätunnuksen haluamallaan nimimerkillä (tehty)
-- Käyttäjä voi kirjautua sisään sovellukseen
+- Käyttäjä voi kirjautua sisään sovellukseen (tehty)
 - Käyttäjä voi syöttää järjestelmään kurssin tunnisteen, päivämäärän ja käytetyn ajan. Nämä tiedot tallennetaan tietokantaan
 - Käyttäjä voi katsoa koosteen syöttämistään tiedoista
 - Käyttäjä voi kirjautua ulos sovelluksesta (tehty)

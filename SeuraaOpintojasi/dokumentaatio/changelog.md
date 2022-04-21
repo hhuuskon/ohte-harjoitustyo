@@ -17,3 +17,5 @@
 ### Viikko5
 - Käyttäjän syötteet tarkastetaan käyttäjätunnuksen luomisen yhteydessä. Tyhjiä kenttiä ei voi syöttää. Ohjelma tarkistaa onko käyttäjätunnus jo olemassa.
 - Käyttäjälle näkyviä virheilmoituksia lisätty.
+- Seurantaan liittyvien toimintojen aloitus. Tietokantaan luotu uusi taulu.
+- Käyttöliittymän näkymä lisätty seurannan tietojen syöttämistä varten.

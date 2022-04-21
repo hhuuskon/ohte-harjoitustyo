@@ -10,4 +10,5 @@
 - 12.04.2022 | Lisätty ominaisuudet jolla käyttäjä voi kirjautua sisään ja ulos sovelluksesta 5h
 - 12.04.2022 | Projektille asetettujen laatumääritysten parantaminen. 4h
 - 20.04.2022 | Sisäänkirjautumisen ominaisuuksien parantaminen. 3h
-Yhteensä: 40h
+- 21.04.2022 | Päätoiminnallisuuden ominaisuuden aloitus. Käyttöliittymän painikkeet ja ikkunat tietojen lisäämiselle, tietokannan taulu. 4h.
+Yhteensä: 44h
