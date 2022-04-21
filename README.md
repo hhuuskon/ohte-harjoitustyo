@@ -11,7 +11,7 @@ Tässä sovelluksessa opiskelija voi pitää kirjaa työajasta, jota hän on kä
 
 ## Asennus
 Voit asentaa tarvittavat riippuvuudet komentoriviltä komennolla:
-''' poetry install '''
+~~~ poetry install ~~~
 
 ## Sovelluksen käynnistäminen
 Voit käynnistää sovelluksen komentoriviltä komennolla:
