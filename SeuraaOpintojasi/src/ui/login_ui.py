@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, StringVar
 from services.users_services import services
 
 
@@ -12,6 +12,8 @@ class LoginUi:
         self._handle_show_tracking_view = handle_show_tracking_view
         self._handle_show_sign_up_view = handle_show_sign_up_view
         self._frame = None
+        self._error_variable = None
+        self._error_label = None
 
         self._initialize()
 
@@ -25,10 +27,17 @@ class LoginUi:
         """
         self._frame.destroy()
 
+    
+    def error_message(self, message):
+        self._error_variable.set(message)
+        self._error_label.grid()
+
     def _initialize(self):
         """ Alustaa graafisen näkymän
         """
         self._frame = ttk.Frame(master=self._root)
+        self._error_variable = StringVar(self._frame)
+        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable)
         self._login()
 
     def _login_click(self):
@@ -43,6 +52,10 @@ class LoginUi:
 
         if login:
             self._handle_show_tracking_view()
+        else:
+            self.error_message("Syötit väärän salasanan tai tunnusta ei ole olemassa.")
+            return
+
 
     def _login(self):
         """ Sisäänkirjautumisen näkymän graafiset elementit. Tekstit ja painikkeet.
