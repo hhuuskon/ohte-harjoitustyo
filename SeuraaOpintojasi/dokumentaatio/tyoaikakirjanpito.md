@@ -9,4 +9,5 @@
 - 10.04.2022 | Käyttöliittymä näkymien lisääminen ja käyttäjätunnuksen luomisen viimeistely 6h
 - 12.04.2022 | Lisätty ominaisuudet jolla käyttäjä voi kirjautua sisään ja ulos sovelluksesta 5h
 - 12.04.2022 | Projektille asetettujen laatumääritysten parantaminen. 4h
-Yhteensä: 37h
+- 20.04.2022 | Sisäänkirjautumisen ominaisuuksien parantaminen. 3h
+Yhteensä: 40h

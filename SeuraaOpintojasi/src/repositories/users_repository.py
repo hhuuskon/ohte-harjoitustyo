@@ -77,7 +77,7 @@ class UsersRepository:
             sql = "SELECT username FROM users WHERE username=:username"
             result = self.db.execute(sql, {"username": username})
             existing_check = result.fetchone()
-            if existing_check == username:
+            if existing_check[0] == username:
                 return True
             else:
                 return False

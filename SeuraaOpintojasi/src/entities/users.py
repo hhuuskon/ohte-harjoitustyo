@@ -1,5 +1,3 @@
-""" Käyttäjän ilmentymän luominen
-"""
 
 class Users:
     """ Yksittäisen käyttäjän ilmentymää kuvaava luokka

@@ -13,4 +13,7 @@
 - Lisätty käyttäjätunnuksen luomisen ominaisuus. Tätä parannetaan vielä esimerkiksi nimimerkin ja salasanan pituuden varmistamiseksi.
 - Käyttäjä voi nyt kirjautua sisään sovellukseen.
 - Käyttäjä voi nyt kirjautua ulos sovelluksesta.
-- 
+
+### Viikko5
+- Käyttäjän syötteet tarkastetaan käyttäjätunnuksen luomisen yhteydessä. Tyhjiä kenttiä ei voi syöttää. Ohjelma tarkistaa onko käyttäjätunnus jo olemassa.
+- Käyttäjälle näkyviä virheilmoituksia lisätty.
