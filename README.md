@@ -11,17 +11,23 @@ Tässä sovelluksessa opiskelija voi pitää kirjaa työajasta, jota hän on kä
 
 ## Asennus
 Voit asentaa tarvittavat riippuvuudet komentoriviltä komennolla:
-~~~ poetry install ~~~
+```
+poetry install
+```
 
 ## Sovelluksen käynnistäminen
 Voit käynnistää sovelluksen komentoriviltä komennolla:
-''' poetry run invoke start '''
+```
+poetry run invoke start
+```
 
 ## Muut komennot
 Voit suorittaa koodin laadun tarkistuksen Pylint -työkalulla komennolla:
-''' poetry run invoke lint '''
+```
+poetry run invoke lint
+```
 
 Voit suorittaa koodin testikattavuusraportin Coverage - työkalulla komennolla:
-''' 
+```
 poetry run invoke coverage
-'''
+```
