@@ -19,3 +19,4 @@
 - Käyttäjälle näkyviä virheilmoituksia lisätty.
 - Seurantaan liittyvien toimintojen aloitus. Tietokantaan luotu uusi taulu.
 - Käyttöliittymän näkymä lisätty seurannan tietojen syöttämistä varten.
+- Testit toimivat ja testikattavuutta lisätty edellisviikoista.
