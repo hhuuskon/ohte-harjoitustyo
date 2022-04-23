@@ -4,6 +4,7 @@ TKT20002 Harjoitustyö
 Tässä sovelluksessa opiskelija voi pitää kirjaa työajasta, jota hän on käyttänyt käymiinsä kursseihin. Sovellukseen luodaan käyttäjätunnus, joten sitä voi käyttää myös useampi käyttäjä samalta laitteelta.
 
 ## Dokumentaatio
+- [Ensimmäinen release](https://github.com/hhuuskon/ohte-harjoitustyo/releases/tag/viikko5)
 - [Vaatimusmäärittely](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/tyoaikakirjanpito.md)
 - [Changelog](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/changelog.md)
