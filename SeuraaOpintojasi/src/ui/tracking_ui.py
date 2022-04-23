@@ -6,9 +6,14 @@ class TrackingUi:
     """ Päänäkymän käyttöliittymän luokka
     """
     def __init__(self, root, handle_show_login_view):
+        """
+        Args:
+        handle_show_login_view: Ohjaaminen kirjautumisnäkymään
+        """
         self._root = root
         self._couse_entry = None
         self._time_entry = None
+        self._date_entry = None
         self._handle_show_login_view = handle_show_login_view
         self._frame = None
         self._error_variable = None
@@ -51,20 +56,25 @@ class TrackingUi:
         """
         course = self._course_entry.get()
         time = self._time_entry.get()
-        if len(course) == 0 or len(time) == 0:
-            self.error_message("Yritit syöttää tyhjän merkkijonon. Syötä käyttäjätunnus ja salasana.")
+        date = self._date_entry.get()
+        if len(course) == 0 or len(time) == 0 or len(date) == 0:
+            self.error_message("Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
             return
+        self.error_message("Tietojen syöttö tietokantaan vasta rakenteilla. Kiitos ymmärryksestä. :)")
+        
 
 
 
     def _tracking(self):
-        """ Päänäkymän graaffiset elementit. Kurssi ja siihen käytetty aika syötetään tähän.
         """
-
+        Päänäkymän graaffiset elementit.
+        Kurssi, siihen käytetty aika ja päivämäärä syötetään tähän.
+        """
         logouttext = "Logout"
         headertext = "Syötä kurssin tiedot ja käytetty aika"
         coursetext = "Kurssi"
         timetext = "Käytetty aika"
+        datetext = "Päivämäärä"
         addtext = "Lisää"
 
         welcome_label = ttk.Label(master=self._frame, text=headertext)
@@ -80,10 +90,15 @@ class TrackingUi:
         time_label.grid(row=2, column=0)
         self._time_entry.grid(row=2, column=1)
 
+        date_label = ttk.Label(master=self._frame, text=datetext)
+        self._date_entry = ttk.Entry(master=self._frame)
+        date_label.grid(row=3, column=0)
+        self._date_entry.grid(row=3, column=1)
+
         add_button = ttk.Button(
             master=self._frame, text=addtext, command=self._add_data_click)
-        add_button.grid(row=3, column=0, columnspan=2)
+        add_button.grid(row=4, column=0, columnspan=2)
 
         logout_button = ttk.Button(
             master=self._frame, text=logouttext, command=self._logout_click)
-        logout_button.grid(row=4, column=0, columnspan=2)
+        logout_button.grid(row=5, column=0, columnspan=2)

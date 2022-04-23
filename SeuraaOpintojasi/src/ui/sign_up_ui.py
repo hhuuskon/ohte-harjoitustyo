@@ -73,22 +73,22 @@ class SignUpUi:
         passwordtext = "Salasana"
 
         welcome_label = ttk.Label(master=self._frame, text=headertext)
-        welcome_label.grid(row=0, column=0)
+        welcome_label.grid(row=0, column=0, sticky=constants.W)
 
         username_label = ttk.Label(master=self._frame, text=usernametext)
         self._username_entry = ttk.Entry(master=self._frame)
-        username_label.grid(row=1, column=0)
-        self._username_entry.grid(row=1, column=1)
+        username_label.grid(row=1, column=0, sticky=constants.W)
+        self._username_entry.grid(row=1, column=1, sticky=constants.W)
 
         password_label = ttk.Label(master=self._frame, text=passwordtext)
         self._password_entry = ttk.Entry(master=self._frame)
-        password_label.grid(row=2, column=0)
-        self._password_entry.grid(row=2, column=1)
+        password_label.grid(row=2, column=0, sticky=constants.W)
+        self._password_entry.grid(row=2, column=1, sticky=constants.W)
 
         sign_up_button = ttk.Button(
             master=self._frame, text=signuptext, command=self._sign_up_click)
-        sign_up_button.grid(row=4, column=0, columnspan=2)
+        sign_up_button.grid(row=4, column=0, columnspan=2, pady=5, sticky=constants.W)
 
         already_user_button = ttk.Button(
             master=self._frame, text=alreadyusertext, command=self._handle_show_login_view)
-        already_user_button.grid(row=5, column=0, columnspan=2)
+        already_user_button.grid(row=5, column=0, columnspan=2, sticky=constants.W)

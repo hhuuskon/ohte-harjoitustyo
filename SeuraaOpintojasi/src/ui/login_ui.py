@@ -68,22 +68,25 @@ class LoginUi:
         passwordtext = "Salasana"
 
         welcome_label = ttk.Label(master=self._frame, text=headertext)
-        welcome_label.grid(row=0, column=0)
+        welcome_label.grid(columnspan=2, sticky=constants.W, pady=10)
+
+        login_label = ttk.Label(master=self._frame, text=logintext)
+        login_label.grid(row=2, sticky=constants.W)
 
         username_label = ttk.Label(master=self._frame, text=usernametext)
         self._username_entry = ttk.Entry(master=self._frame)
-        username_label.grid(row=1, column=0)
-        self._username_entry.grid(row=1, column=1)
+        username_label.grid(row=3, column=0, sticky=constants.W)
+        self._username_entry.grid(row=3, column=1, sticky=constants.W)
 
         password_label = ttk.Label(master=self._frame, text=passwordtext)
         self._password_entry = ttk.Entry(master=self._frame)
-        password_label.grid(row=2, column=0)
-        self._password_entry.grid(row=2, column=1)
+        password_label.grid(row=4, column=0, sticky=constants.W)
+        self._password_entry.grid(row=4, column=1, sticky=constants.W)
 
         login_button = ttk.Button(
             master=self._frame, text=logintext, command=self._login_click)
-        login_button.grid(row=3, column=0, columnspan=2)
+        login_button.grid(row=5, column=0, columnspan=2, pady=5, sticky=constants.W)
 
         sign_up_button = ttk.Button(
             master=self._frame, text=signuptext, command=self._handle_show_sign_up_view)
-        sign_up_button.grid(row=3, column=1, columnspan=2)
+        sign_up_button.grid(row=6, column=0, columnspan=2, sticky=constants.W)
