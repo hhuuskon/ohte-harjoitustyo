@@ -46,7 +46,8 @@ class SignUpUi:
         self._sign_up()
 
     def _sign_up_click(self):
-        """ Käyttäjätunnuksen luomiseen liittyvä toiminto
+        """ Käyttäjätunnuksen luomiseen liittyvä toiminto.
+            Syöttää tekstikenttiin syötetyt tiedot eteenpäin kohti tietokantaa.
         """
         username = self._username_entry.get()
         password = self._password_entry.get()

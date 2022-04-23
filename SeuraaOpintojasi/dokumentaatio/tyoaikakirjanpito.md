@@ -12,4 +12,5 @@
 - 20.04.2022 | Sisäänkirjautumisen ominaisuuksien parantaminen. Testejä lisätty. 3h
 - 21.04.2022 | Päätoiminnallisuuden ominaisuuden aloitus. Käyttöliittymän painikkeet ja ikkunat tietojen lisäämiselle, tietokannan taulu. 4h.
 - 23.04.2022 | Käyttöliittymää selkeytetty. Päätoiminnallisuuden näkymää ja toiminnallisuutta lisätty vastaamaan alkuperäistä vaatimusmäärittelyä. 4h
-Yhteensä: 48h
+- 23.04.2022 | Testikattavuutta lisätty. Pylint virheitä korjattu. 2h
+Yhteensä: 50h

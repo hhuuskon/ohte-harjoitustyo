@@ -61,8 +61,6 @@ class TrackingUi:
             self.error_message("Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
             return
         self.error_message("Tietojen syöttö tietokantaan vasta rakenteilla. Kiitos ymmärryksestä. :)")
-        
-
 
 
     def _tracking(self):

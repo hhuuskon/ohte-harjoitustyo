@@ -43,7 +43,7 @@ class TestUsersRepository(unittest.TestCase):
     def test_already_existing_user_db(self):
         username = self.user.username
         result = repository.existing_user_db(username)
-        self.assertEqual(None, result)
+        self.assertEqual(False, result)
 
 
 

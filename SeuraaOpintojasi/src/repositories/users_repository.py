@@ -80,6 +80,7 @@ class UsersRepository:
             return False
         except Exception as error:
             print(error)
+            return False
 
     def existing_user_db(self, username):
 
@@ -92,6 +93,7 @@ class UsersRepository:
                 return True
         except Exception as error:
             print(error)
+            return False
 
 
 repository = UsersRepository("db.db")
