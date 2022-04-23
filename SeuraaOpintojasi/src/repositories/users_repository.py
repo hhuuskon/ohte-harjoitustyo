@@ -39,6 +39,7 @@ class UsersRepository:
         id SERIAL PRIMARY KEY,
         course TEXT,
         time INTEGER,
+        date TEXT,
         user_id INTEGER REFERENCES users
         );
         ''')
