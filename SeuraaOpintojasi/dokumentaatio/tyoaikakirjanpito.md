@@ -13,4 +13,5 @@
 - 21.04.2022 | Päätoiminnallisuuden ominaisuuden aloitus. Käyttöliittymän painikkeet ja ikkunat tietojen lisäämiselle, tietokannan taulu. 4h.
 - 23.04.2022 | Käyttöliittymää selkeytetty. Päätoiminnallisuuden näkymää ja toiminnallisuutta lisätty vastaamaan alkuperäistä vaatimusmäärittelyä. 4h
 - 23.04.2022 | Testikattavuutta lisätty. Pylint virheitä korjattu. 2h
-Yhteensä: 50h
+- 25.04.2022 | Dokumentaatiota lisätty. Virheet korjattu pakkauskaaviosta. 1h
+Yhteensä: 51h

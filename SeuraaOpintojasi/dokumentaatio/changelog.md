@@ -15,8 +15,9 @@
 - Käyttäjä voi nyt kirjautua ulos sovelluksesta.
 
 ### Viikko5
-- Käyttäjän syötteet tarkastetaan käyttäjätunnuksen luomisen yhteydessä. Tyhjiä kenttiä ei voi syöttää. Ohjelma tarkistaa onko käyttäjätunnus jo olemassa.
-- Käyttäjälle näkyviä virheilmoituksia lisätty.
+- Käyttäjän syötteet tarkastetaan käyttäjätunnuksen luomisen yhteydessä. Tyhjiä kenttiä ei voi syöttää. Ohjelma tarkistaa onko käyttäjätunnus jo olemassa. Ominaisuus on nyt valmis.
+- Käyttäjälle näytettävien virheilmoitusten toiminnallisuus ja viestejä lisätty.
 - Seurantaan liittyvien toimintojen aloitus. Tietokantaan luotu uusi taulu.
 - Käyttöliittymän näkymä lisätty seurannan tietojen syöttämistä varten.
 - Testit toimivat ja testikattavuutta lisätty edellisviikoista.
+- Dokumentaatiota lisätty ja parannettu edellisviikosta.
