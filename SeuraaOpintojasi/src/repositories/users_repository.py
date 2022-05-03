@@ -58,7 +58,7 @@ class UsersRepository:
             self.db.execute(
                 sql, {"username": user.username, "password": user.password})
             self.db.commit()
-        except Exception as error:
+        except TypeError as error:
             print(error)
             return False
         return True
@@ -78,9 +78,11 @@ class UsersRepository:
             if user_check[0] == username and user_check[1] == password:
                 return True
             return False
-        except Exception as error:
+        except TypeError as error:
             print(error)
             return False
+        return True
+
 
     def existing_user_db(self, username):
         """ Käyttäjänimen tarkistaminen tietokannasta tunnusten luomista varten.
@@ -95,7 +97,7 @@ class UsersRepository:
             existing_check = result.fetchone()
             if existing_check[0] == username:
                 return True
-        except Exception as error:
+        except TypeError as error:
             print(error)
             return False
 
@@ -111,7 +113,7 @@ class UsersRepository:
             self.db.execute(
                 sql, {"course": course, "time": time, "date": date})
             self.db.commit()
-        except Exception as error:
+        except TypeError as error:
             print(error)
             return False
         return True
