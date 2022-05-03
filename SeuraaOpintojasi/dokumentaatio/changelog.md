@@ -29,3 +29,4 @@
 - Lisätty painikkeita, jotta koosteen ja tiedon lisäämiseen tarkoitettujen ruutujen välillä voi liikkua.
 - Testikattavuutta lisätty uusille ominaisuuksille.
 - Dokumentaatioon lisätty alustava käyttöohje.
+- Dokumentaatioon lisätty alustava arkkitehtuurikuvaus.

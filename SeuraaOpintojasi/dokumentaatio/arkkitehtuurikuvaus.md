@@ -1,4 +1,4 @@
-### Arkkitehtuurikuvaus
+# Arkkitehtuurikuvaus
 
 ## Rakenne
 
@@ -35,12 +35,12 @@ Pakkausrakenteen repositories -luokassa toteutetaan tiedon tallennus SQLite tiet
 
 ## Päätoiminnallisuudet
 
-# Sisäänkirjautuminen
+### Sisäänkirjautuminen
 
 ![Sekvenssikaavio](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/sekvenssikaavio.png)
 
-# Uuden käyttäjän luominen
+### Uuden käyttäjän luominen
 
-# Tietojen lisääminen
+### Tietojen lisääminen
 
-# Koosteen luominen
+### Koosteen luominen
