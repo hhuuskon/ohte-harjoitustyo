@@ -17,5 +17,6 @@
 - 02.05.2022 | Kurssien tietojen syöttämiseen liittyvät ominaisuudet lisätty. 4h
 - 03.05.2022 | Koosteen toiminnallisuuksien lisäämistä aloitettu. 2h
 - 03.05.2022 | Testejä ja dokumentaatiota lisätty. 3h
-- 03.05.2022 | Dokumentaatioon listty alustava käyttöohje ja alustava arkkitehtuurikuvaus. 3h
-Yhteensä: 63h
+- 03.05.2022 | Dokumentaatioon lisätty alustava käyttöohje ja alustava arkkitehtuurikuvaus. 3h
+
+### Yhteensä: 63h
