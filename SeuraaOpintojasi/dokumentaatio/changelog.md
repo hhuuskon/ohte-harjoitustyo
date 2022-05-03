@@ -28,4 +28,4 @@
 - Koosteen käyttöliittymä näkymä valmisteltu.
 - Lisätty painikkeita, jotta koosteen ja tiedon lisäämiseen tarkoitettujen ruutujen välillä voi liikkua.
 - Testikattavuutta lisätty uusille ominaisuuksille.
-- Dokumentaatiota lisätty.
+- Dokumentaatioon lisätty alustava käyttöohje.
