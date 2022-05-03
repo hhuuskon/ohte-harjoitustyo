@@ -45,4 +45,8 @@ class TestUsersServices(unittest.TestCase):
         result = services.sign_up(username, password)
         self.assertEqual(True, result)
 
+    def test_add_data(self):
+        result = services.add_data("TK20002", 4, "20.03.2022")
+        self.assertEqual(True, result)
+
 

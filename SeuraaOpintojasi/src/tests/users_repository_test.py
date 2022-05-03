@@ -45,6 +45,12 @@ class TestUsersRepository(unittest.TestCase):
         result = repository.existing_user_db(username)
         self.assertEqual(False, result)
 
+    
+    def test_add_data_db(self):
+        result = repository.add_data_db("TK20002", 4, "20.03.2022")
+        self.assertEqual(True, result)
+
+
 
 
     
