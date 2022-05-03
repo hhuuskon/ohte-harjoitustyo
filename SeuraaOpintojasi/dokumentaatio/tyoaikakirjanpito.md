@@ -16,4 +16,5 @@
 - 25.04.2022 | Dokumentaatiota lisätty. Virheet korjattu pakkauskaaviosta. 1h
 - 02.05.2022 | Kurssien tietojen syöttämiseen liittyvät ominaisuudet lisätty. 4h
 - 03.05.2022 | Koosteen toiminnallisuuksien lisäämistä aloitettu. 2h
-Yhteensä: 57h
+- 03.05.2022 | Testejä ja dokumentaatiota lisätty. 3h
+Yhteensä: 60h

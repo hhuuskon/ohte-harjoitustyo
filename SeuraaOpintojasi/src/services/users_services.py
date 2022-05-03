@@ -58,6 +58,7 @@ class UsersServices:
 
         if entry:
             return True
+        return False
 
 
 

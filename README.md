@@ -32,3 +32,9 @@ Voit suorittaa koodin testikattavuusraportin Coverage - työkalulla komennolla:
 ```
 poetry run invoke coverage
 ```
+
+Voit luoda visuaalisen testikattavuusraportin komennolla:
+```
+poetry run invoke coverage-report
+```
+
