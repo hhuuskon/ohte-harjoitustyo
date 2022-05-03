@@ -21,3 +21,9 @@
 - Käyttöliittymän näkymä lisätty seurannan tietojen syöttämistä varten.
 - Testit toimivat ja testikattavuutta lisätty edellisviikoista.
 - Dokumentaatiota lisätty ja parannettu edellisviikosta.
+
+### Viikko6
+- Käyttäjä voi nyt syöttää kurssin tunnisteen, käytetyn ajan ja päivämäärän ohjelmaan. Ohjelma tallentaa tiedot tietokantaan sille tarkoitettuun tauluun.
+- Koosteen tekemiseen liittyvien toiminnallisuuksien aloittaminen.
+- Koosteen käyttöliittymä näkymä valmisteltu.
+- Lisätty painikkeita, jotta koosteen ja tiedon lisäämiseen tarkoitettujen ruutujen välillä voi liikkua.

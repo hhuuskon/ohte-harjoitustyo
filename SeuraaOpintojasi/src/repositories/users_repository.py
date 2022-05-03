@@ -16,14 +16,14 @@ class UsersRepository:
         self.initialize_database()
 
     def drop_tables(self):
-        """ Poistaa olemassaolevan tietokannan
+        """ Poistaa olemassaolevat tietokannat
         """
         self.db.execute('''DROP TABLE IF EXISTS users;''')
         self.db.execute('''DROP TABLE IF EXISTS courses;''')
         self.db.commit()
 
     def initialize_database(self):
-        """ Luo uuden tietokannan
+        """ Luo uudet tietokannat
         """
         self.drop_tables()
         self.db.execute('''
@@ -83,6 +83,10 @@ class UsersRepository:
             return False
 
     def existing_user_db(self, username):
+        """ Käyttäjänimen tarkistaminen tietokannasta tunnusten luomista varten.
+        Args:
+            username: Käyttäjätunnus jonka käyttäjä syöttää
+        """
 
         try:
 
@@ -94,6 +98,23 @@ class UsersRepository:
         except Exception as error:
             print(error)
             return False
+
+    def add_data_db(self, course, time, date):
+        """ Kurssiin käytetyn ajan syöttö
+        Args:
+        course: Kurssin tunniste jonka käyttäjä syöttää
+        time: Kurssiin käytetty aika jonka käyttäjä syöttää
+        date: Päivämäärä jonka käyttäjä syöttää
+        """
+        try:
+            sql = "INSERT INTO courses (course, time, date) VALUES (:course,:time,:date)"
+            self.db.execute(
+                sql, {"course": course, "time": time, "date": date})
+            self.db.commit()
+        except Exception as error:
+            print(error)
+            return False
+        return True
 
 
 repository = UsersRepository("db.db")

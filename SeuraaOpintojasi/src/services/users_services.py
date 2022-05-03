@@ -47,6 +47,18 @@ class UsersServices:
         self._user = None
         return True
 
+    def add_data(self, course, time, date):
+        """ Kurssiin käytetyn ajan syöttö
+        Args:
+        course: Kurssin tunniste jonka käyttäjä syöttää
+        time: Kurssiin käytetty aika jonka käyttäjä syöttää
+        date: Päivämäärä jonka käyttäjä syöttää
+        """
+        entry = repository.add_data_db(course, time, date)
+
+        if entry:
+            return True
+
 
 
 services = UsersServices()

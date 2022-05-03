@@ -14,4 +14,6 @@
 - 23.04.2022 | Käyttöliittymää selkeytetty. Päätoiminnallisuuden näkymää ja toiminnallisuutta lisätty vastaamaan alkuperäistä vaatimusmäärittelyä. 4h
 - 23.04.2022 | Testikattavuutta lisätty. Pylint virheitä korjattu. 2h
 - 25.04.2022 | Dokumentaatiota lisätty. Virheet korjattu pakkauskaaviosta. 1h
-Yhteensä: 51h
+- 02.05.2022 | Kurssien tietojen syöttämiseen liittyvät ominaisuudet lisätty. 4h
+- 03.05.2022 | Koosteen toiminnallisuuksien lisäämistä aloitettu. 2h
+Yhteensä: 57h

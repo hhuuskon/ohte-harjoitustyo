@@ -1,6 +1,7 @@
 from ui.login_ui import LoginUi
 from ui.sign_up_ui import SignUpUi
 from ui.tracking_ui import TrackingUi
+from ui.summary_ui import SummaryUi
 
 """ Käyttöliittymän osa, joka pitää sisällään eri näkymän.
     Näkymät vaihtelevat sen mukaan mitä osaa ohjelmasta käytetään
@@ -48,6 +49,16 @@ class UserInterface:
         """ Näyttää toimintojen päänäkymän
         """
         self._hide_current_view()
-        self._current_view = TrackingUi(self._root, self._show_login_view)
+        self._current_view = TrackingUi(
+            self._root, self._show_login_view, self._show_summary_view)
+
+        self._current_view.pack()
+
+    def _show_summary_view(self):
+        """ Näyttää yhteenvedon syötetyistä tiedoista
+        """
+        self._hide_current_view()
+        self._current_view = SummaryUi(
+            self._root, self._show_login_view, self._show_tracking_view)
 
         self._current_view.pack()
