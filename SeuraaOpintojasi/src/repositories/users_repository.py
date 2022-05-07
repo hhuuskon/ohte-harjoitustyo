@@ -58,7 +58,7 @@ class UsersRepository:
             self.db.execute(
                 sql, {"username": user.username, "password": user.password})
             self.db.commit()
-        except TypeError as error:
+        except Exception as error:
             print(error)
             return False
         return True
@@ -101,22 +101,6 @@ class UsersRepository:
             print(error)
             return False
 
-    def add_data_db(self, course, time, date):
-        """ Kurssiin käytetyn ajan syöttö
-        Args:
-        course: Kurssin tunniste jonka käyttäjä syöttää
-        time: Kurssiin käytetty aika jonka käyttäjä syöttää
-        date: Päivämäärä jonka käyttäjä syöttää
-        """
-        try:
-            sql = "INSERT INTO courses (course, time, date) VALUES (:course,:time,:date)"
-            self.db.execute(
-                sql, {"course": course, "time": time, "date": date})
-            self.db.commit()
-        except TypeError as error:
-            print(error)
-            return False
-        return True
 
 
 repository = UsersRepository("db.db")

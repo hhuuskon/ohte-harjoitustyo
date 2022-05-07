@@ -1,11 +1,12 @@
 from tkinter import ttk, constants, StringVar
 from services.users_services import services
+from services.course_services import courseservices
 
 
 class TrackingUi:
     """ Päänäkymän käyttöliittymän luokka
     """
-    def __init__(self, root, handle_show_login_view, handle_show_summary_view):
+    def __init__(self, root, handle_show_login_view, handle_show_summary_view, handle_show_summary_all_view):
         """
         Args:
         handle_show_login_view: Ohjaaminen kirjautumisnäkymään.
@@ -17,6 +18,7 @@ class TrackingUi:
         self._date_entry = None
         self._handle_show_login_view = handle_show_login_view
         self._handle_show_summary_view = handle_show_summary_view
+        self._handle_show_summary_all_view = handle_show_summary_all_view
         self._frame = None
         self._error_variable = None
         self._error_label = None
@@ -62,11 +64,17 @@ class TrackingUi:
         if len(course) == 0 or len(time) == 0 or len(date) == 0:
             self.error_message("Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
             return
-        self._data = services.add_data(course, time, date)
+        self._data = courseservices.add_data(course, time, date)
         if self._data:
             self._handle_show_summary_view()
         else:
             self.error_message("Tietojen syöttö tietokantaan ei onnistunut.")
+
+    def _show_summary_view(self, type):
+        if type == "summary":
+            self._handle_show_summary_view
+        if type == "summary_all":
+            self.self._handle_show_summary_all_view
 
 
     def _tracking(self):
@@ -81,6 +89,7 @@ class TrackingUi:
         datetext = "Päivämäärä (esim 30.04.2022)"
         addtext = "Lisää tietokantaan"
         summarytext = "Näytä kooste"
+        summaryalltext = "Näytä kaikki merkinnät"
 
         welcome_label = ttk.Label(master=self._frame, text=headertext)
         welcome_label.grid(row=0, column=0)
@@ -108,6 +117,12 @@ class TrackingUi:
             master=self._frame, text=summarytext, command=self._handle_show_summary_view)
         summary_button.grid(row=5, column=0, columnspan=2)
 
+
+        summary_all_button = ttk.Button(
+            master=self._frame, text=summaryalltext, command=self._handle_show_summary_all_view)
+        summary_all_button.grid(row=6, column=0, columnspan=2)
+
+
         logout_button = ttk.Button(
             master=self._frame, text=logouttext, command=self._logout_click)
-        logout_button.grid(row=6, column=0, columnspan=2)
+        logout_button.grid(row=7, column=0, columnspan=2)

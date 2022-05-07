@@ -18,5 +18,8 @@
 - 03.05.2022 | Koosteen toiminnallisuuksien lisäämistä aloitettu. 2h
 - 03.05.2022 | Testejä ja dokumentaatiota lisätty. 3h
 - 03.05.2022 | Dokumentaatioon lisätty alustava käyttöohje ja alustava arkkitehtuurikuvaus. 3h
+- 04.05.2022 | Saadun palautteen pohjalta muutoksia. Toiminnallisuuksien eriyttämistä omiin luokkiinsa. 3h
+- 05.05.2022 | Syötettyjen tietojen koosteen tekemiseen liittyvien toiminnallisuuksien tekemistä. Tietokantakyselyt ja funktiot. 3h.
+- 07.05.2022 | Koosteen toiminnallisuuksien parantaminen ja niiden näkyvyys sekä muotoilu käyttöliittymässä lisätty. 3h
 
-### Yhteensä: 63h
+### Yhteensä: 72h

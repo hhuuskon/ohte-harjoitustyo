@@ -14,6 +14,7 @@ class UserInterface:
     def __init__(self, root):
         self._root = root
         self._current_view = None
+        self._summary_type = None
 
     def start(self):
         """ Käynnistää tämän näkymän ensimmäiseksi
@@ -50,15 +51,27 @@ class UserInterface:
         """
         self._hide_current_view()
         self._current_view = TrackingUi(
-            self._root, self._show_login_view, self._show_summary_view)
+            self._root, self._show_login_view, self._show_summary_view, self._show_summary_all_view)
 
         self._current_view.pack()
 
     def _show_summary_view(self):
         """ Näyttää yhteenvedon syötetyistä tiedoista
         """
+        self._summary_type = "summary"
         self._hide_current_view()
         self._current_view = SummaryUi(
-            self._root, self._show_login_view, self._show_tracking_view)
+            self._root, self._show_login_view, self._show_tracking_view, self._summary_type)
+
+        self._current_view.pack()
+
+    
+    def _show_summary_all_view(self):
+        """ Näyttää yhteenvedon syötetyistä tiedoista
+        """
+        self._summary_type = "summary_all"
+        self._hide_current_view()
+        self._current_view = SummaryUi(
+            self._root, self._show_login_view, self._show_tracking_view, self._summary_type)
 
         self._current_view.pack()
