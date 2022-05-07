@@ -71,6 +71,8 @@ class TrackingUi:
             self.error_message("Tietojen syöttö tietokantaan ei onnistunut.")
 
     def _show_summary_view(self, type):
+        """ Toiminto ohjaa oikeanlaiseen yhteenvedon näkymään
+        """
         if type == "summary":
             self._handle_show_summary_view
         if type == "summary_all":

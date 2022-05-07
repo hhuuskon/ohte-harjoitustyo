@@ -30,3 +30,9 @@
 - Testikattavuutta lisätty uusille ominaisuuksille.
 - Dokumentaatioon lisätty alustava käyttöohje.
 - Dokumentaatioon lisätty alustava arkkitehtuurikuvaus.
+
+### Viikko7
+- Käyttäjä voi nyt tehdä kaksi erilasita koostetta syöttämistään kursseista.
+- Toiminnallisuuksia eriytetty koodin osalta, jotta ohjelman rakenne olisi selkeämpi.
+- Testikattavuutta lisätty uusien ominaisuuksien ja eriytyksen myötä.
+- Virheviestien määrää lisätty.

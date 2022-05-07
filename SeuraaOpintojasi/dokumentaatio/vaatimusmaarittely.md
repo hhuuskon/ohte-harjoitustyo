@@ -11,7 +11,7 @@ Sovellusta käytetään normaalina käyttäjänä. Myöhemmässä vaiheessa sove
 - Käyttäjä voi luoda järjestelmään käyttäjätunnuksen haluamallaan nimimerkillä (tehty)
 - Käyttäjä voi kirjautua sisään sovellukseen (tehty)
 - Käyttäjä voi syöttää järjestelmään kurssin tunnisteen, päivämäärän ja käytetyn ajan. Nämä tiedot tallennetaan tietokantaan. (tehty)
-- Käyttäjä voi katsoa koosteen syöttämistään tiedoista
+- Käyttäjä voi katsoa koosteen syöttämistään tiedoista (tehty)
 - Käyttäjä voi kirjautua ulos sovelluksesta (tehty)
 
 ## Mahdollisia ominaisuuksia:

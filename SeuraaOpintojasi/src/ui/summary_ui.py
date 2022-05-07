@@ -50,6 +50,11 @@ class SummaryUi:
 
     def _summary_click(self):
         result = courseservices.create_summary()
+
+
+        if len(result) == 0:
+            self.error_message("Sinulla ei ole vielä merkintöjä. Palaa edelliselle sivulle lisätäksesi niitä.")
+            
         row_variable = 11
         for rivi in result:
             label = ttk.Label(master=self._frame, text=f"Kurssitunniste: {rivi[0]} | Käytetty aika: {rivi[1]} Tuntia")
@@ -59,6 +64,10 @@ class SummaryUi:
 
     def _summary_all_click(self):
         result = courseservices.create_summary_all()
+
+        if len(result) == 0:
+            self.error_message("Sinulla ei ole vielä merkintöjä. Palaa edelliselle sivulle lisätäksesi niitä.")
+
         row_variable = 11
         for rivi in result:
             label = ttk.Label(master=self._frame, text=f"Kurssitunniste: {rivi[1]} | Päivämäärä: {rivi[3]} | Käytetty aika: {rivi[2]} Tuntia")
