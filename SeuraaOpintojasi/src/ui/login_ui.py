@@ -5,6 +5,7 @@ from services.users_services import services
 class LoginUi:
     """ Sisäänkirjautumisen käyttöliittymän luokka
     """
+
     def __init__(self, root, handle_show_tracking_view, handle_show_sign_up_view):
         self._root = root
         self._username_entry = None
@@ -27,7 +28,6 @@ class LoginUi:
         """
         self._frame.destroy()
 
-    
     def error_message(self, message):
         self._error_variable.set(message)
         self._error_label.grid()
@@ -37,7 +37,8 @@ class LoginUi:
         """
         self._frame = ttk.Frame(master=self._root)
         self._error_variable = StringVar(self._frame)
-        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable, foreground="red")
+        self._error_label = ttk.Label(
+            master=self._frame, textvariable=self._error_variable, foreground="red")
         self._login()
 
     def _login_click(self):
@@ -46,16 +47,17 @@ class LoginUi:
         username = self._username_entry.get()
         password = self._password_entry.get()
         if len(password) == 0 or len(username) == 0:
-            self.error_message("Yritit syöttää tyhjän merkkijonon. Syötä käyttäjätunnus ja salasana.")
+            self.error_message(
+                "Yritit syöttää tyhjän merkkijonon. Syötä käyttäjätunnus ja salasana.")
             return
         login = services.login(username, password)
 
         if login:
             self._handle_show_tracking_view()
         else:
-            self.error_message("Syötit väärän salasanan tai tunnusta ei ole olemassa.")
+            self.error_message(
+                "Syötit väärän salasanan tai tunnusta ei ole olemassa.")
             return
-
 
     def _login(self):
         """ Sisäänkirjautumisen näkymän graafiset elementit. Tekstit ja painikkeet.
@@ -85,7 +87,8 @@ class LoginUi:
 
         login_button = ttk.Button(
             master=self._frame, text=logintext, command=self._login_click)
-        login_button.grid(row=5, column=0, columnspan=2, pady=5, sticky=constants.W)
+        login_button.grid(row=5, column=0, columnspan=2,
+                          pady=5, sticky=constants.W)
 
         sign_up_button = ttk.Button(
             master=self._frame, text=signuptext, command=self._handle_show_sign_up_view)

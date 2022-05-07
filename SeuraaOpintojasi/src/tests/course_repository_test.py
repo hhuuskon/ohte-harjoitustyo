@@ -15,5 +15,3 @@ class TestCourseRepository(unittest.TestCase):
     def test_add_data_db(self):
         result = Crepository.add_data_db("TK20002", 4, "20.03.2022")
         self.assertEqual(True, result)
-
-    

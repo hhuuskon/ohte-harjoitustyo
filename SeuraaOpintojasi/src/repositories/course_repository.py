@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class CourseRepository:
 
     def __init__(self, connection):

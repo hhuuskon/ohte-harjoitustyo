@@ -11,7 +11,6 @@ class TestCourseServices(unittest.TestCase):
         self.db.isolation_level = None
         repository.initialize_database()
 
-
     def test_add_data(self):
         result = courseservices.add_data("TK20002", 4, "20.03.2022")
         self.assertEqual(True, result)

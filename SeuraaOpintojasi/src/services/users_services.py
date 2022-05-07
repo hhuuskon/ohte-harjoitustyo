@@ -1,6 +1,7 @@
 from repositories.users_repository import UsersRepository as default_users_repository, repository
 from entities.users import Users
 
+
 class UsersServices:
     """ Käyttäjien hallinnoinnista vastaava luokka
     """
@@ -46,7 +47,6 @@ class UsersServices:
         """
         self._user = None
         return True
-
 
 
 services = UsersServices()

@@ -6,6 +6,7 @@ from services.course_services import courseservices
 class TrackingUi:
     """ Päänäkymän käyttöliittymän luokka
     """
+
     def __init__(self, root, handle_show_login_view, handle_show_summary_view, handle_show_summary_all_view):
         """
         Args:
@@ -22,7 +23,6 @@ class TrackingUi:
         self._frame = None
         self._error_variable = None
         self._error_label = None
-
 
         self._initialize()
 
@@ -45,7 +45,8 @@ class TrackingUi:
         """
         self._frame = ttk.Frame(master=self._root)
         self._error_variable = StringVar(self._frame)
-        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable, foreground="red")
+        self._error_label = ttk.Label(
+            master=self._frame, textvariable=self._error_variable, foreground="red")
         self._tracking()
 
     def _logout_click(self):
@@ -62,7 +63,8 @@ class TrackingUi:
         time = self._time_entry.get()
         date = self._date_entry.get()
         if len(course) == 0 or len(time) == 0 or len(date) == 0:
-            self.error_message("Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
+            self.error_message(
+                "Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
             return
         self._data = courseservices.add_data(course, time, date)
         if self._data:
@@ -77,7 +79,6 @@ class TrackingUi:
             self._handle_show_summary_view
         if type == "summary_all":
             self.self._handle_show_summary_all_view
-
 
     def _tracking(self):
         """
@@ -119,11 +120,9 @@ class TrackingUi:
             master=self._frame, text=summarytext, command=self._handle_show_summary_view)
         summary_button.grid(row=5, column=0, columnspan=2)
 
-
         summary_all_button = ttk.Button(
             master=self._frame, text=summaryalltext, command=self._handle_show_summary_all_view)
         summary_all_button.grid(row=6, column=0, columnspan=2)
-
 
         logout_button = ttk.Button(
             master=self._frame, text=logouttext, command=self._logout_click)

@@ -83,7 +83,6 @@ class UsersRepository:
             return False
         return True
 
-
     def existing_user_db(self, username):
         """ Käyttäjänimen tarkistaminen tietokannasta tunnusten luomista varten.
         Args:
@@ -100,7 +99,6 @@ class UsersRepository:
         except TypeError as error:
             print(error)
             return False
-
 
 
 repository = UsersRepository("db.db")

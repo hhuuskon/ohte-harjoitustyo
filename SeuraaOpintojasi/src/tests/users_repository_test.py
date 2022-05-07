@@ -44,8 +44,3 @@ class TestUsersRepository(unittest.TestCase):
         username = self.user.username
         result = repository.existing_user_db(username)
         self.assertEqual(False, result)
-
-
-
-
-    

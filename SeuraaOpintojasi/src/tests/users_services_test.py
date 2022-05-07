@@ -25,7 +25,6 @@ class TestUsersServices(unittest.TestCase):
         result = services.login(username, password)
         self.assertEqual(True, result)
 
-    
     def test_login_wrong_credentials(self):
         username = self.user2.username
         password = self.user.password
@@ -38,10 +37,8 @@ class TestUsersServices(unittest.TestCase):
         result = services.sign_up(username, password)
         self.assertEqual(False, result)
 
-
     def test_sign_up_new(self):
         username = self.user.username
         password = self.user.password
         result = services.sign_up(username, password)
         self.assertEqual(True, result)
-

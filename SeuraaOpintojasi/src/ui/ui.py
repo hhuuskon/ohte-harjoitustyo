@@ -11,6 +11,7 @@ from ui.summary_ui import SummaryUi
 class UserInterface:
     """ Käyttöliittymän näkymien hallinnoinnin luokka
     """
+
     def __init__(self, root):
         self._root = root
         self._current_view = None
@@ -65,7 +66,6 @@ class UserInterface:
 
         self._current_view.pack()
 
-    
     def _show_summary_all_view(self):
         """ Näyttää yhteenvedon syötetyistä tiedoista
         """
