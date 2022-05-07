@@ -41,7 +41,7 @@ class SummaryUi:
         """
         self._frame = ttk.Frame(master=self._root)
         self._error_variable = StringVar(self._frame)
-        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable)
+        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable, foreground="red")
         self._summary()
         if self._summary_type == "summary":
             self._summary_click()
@@ -54,7 +54,7 @@ class SummaryUi:
 
         if len(result) == 0:
             self.error_message("Sinulla ei ole vielä merkintöjä. Palaa edelliselle sivulle lisätäksesi niitä.")
-            
+
         row_variable = 11
         for rivi in result:
             label = ttk.Label(master=self._frame, text=f"Kurssitunniste: {rivi[0]} | Käytetty aika: {rivi[1]} Tuntia")

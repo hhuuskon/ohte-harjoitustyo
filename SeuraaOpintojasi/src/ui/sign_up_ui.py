@@ -42,7 +42,7 @@ class SignUpUi:
         """
         self._frame = ttk.Frame(master=self._root)
         self._error_variable = StringVar(self._frame)
-        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable)
+        self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable, foreground="red")
         self._sign_up()
 
     def _sign_up_click(self):
