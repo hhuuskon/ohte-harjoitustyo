@@ -90,10 +90,8 @@ class SignUpUi:
 
         sign_up_button = ttk.Button(
             master=self._frame, text=signuptext, command=self._sign_up_click)
-        sign_up_button.grid(row=4, column=0, columnspan=2,
-                            pady=5, sticky=constants.W)
+        sign_up_button.grid(row=4, column=0, columnspan=2)
 
         already_user_button = ttk.Button(
             master=self._frame, text=alreadyusertext, command=self._handle_show_login_view)
-        already_user_button.grid(
-            row=5, column=0, columnspan=2, sticky=constants.W)
+        already_user_button.grid(row=5, column=0, columnspan=2)

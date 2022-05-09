@@ -87,9 +87,8 @@ class LoginUi:
 
         login_button = ttk.Button(
             master=self._frame, text=logintext, command=self._login_click)
-        login_button.grid(row=5, column=0, columnspan=2,
-                          pady=5, sticky=constants.W)
+        login_button.grid(row=5, column=0, columnspan=2)
 
         sign_up_button = ttk.Button(
             master=self._frame, text=signuptext, command=self._handle_show_sign_up_view)
-        sign_up_button.grid(row=6, column=0, columnspan=2, sticky=constants.W)
+        sign_up_button.grid(row=6, column=0, columnspan=2)

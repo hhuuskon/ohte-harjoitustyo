@@ -47,6 +47,10 @@ class UsersServices:
         """
         self._user = None
         return True
+    
+    def get_user_id(self):
+        user_id = repository.get_user_id(self._user.username)
+        return user_id
 
 
 services = UsersServices()

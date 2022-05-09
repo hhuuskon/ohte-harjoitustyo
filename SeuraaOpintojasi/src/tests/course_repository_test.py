@@ -13,5 +13,5 @@ class TestCourseRepository(unittest.TestCase):
         Urepository.initialize_database()
 
     def test_add_data_db(self):
-        result = Crepository.add_data_db("TK20002", 4, "20.03.2022")
+        result = Crepository.add_data_db("TK20002", 4, "20.03.2022", 1)
         self.assertEqual(True, result)

@@ -21,5 +21,5 @@
 - 04.05.2022 | Saadun palautteen pohjalta muutoksia. Toiminnallisuuksien eriyttämistä omiin luokkiinsa. 3h
 - 05.05.2022 | Syötettyjen tietojen koosteen tekemiseen liittyvien toiminnallisuuksien tekemistä. Tietokantakyselyt ja funktiot. 3h.
 - 07.05.2022 | Koosteen toiminnallisuuksien parantaminen ja niiden näkyvyys sekä muotoilu käyttöliittymässä lisätty. 3h
-
-### Yhteensä: 72h
+- 09.05.2022 | Tietokantaan ja ohjelmaan tehty parannuksia, jotta syötetyn datan koosteet näkyisi vain sille käyttäjälle joka on ne syöttänyt. 2h
+### Yhteensä: 74h

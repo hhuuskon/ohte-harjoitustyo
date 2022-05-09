@@ -62,13 +62,14 @@ class TrackingUi:
         course = self._course_entry.get()
         time = self._time_entry.get()
         date = self._date_entry.get()
+        user_id = services.get_user_id()
         if len(course) == 0 or len(time) == 0 or len(date) == 0:
             self.error_message(
                 "Yritit syöttää tyhjän merkkijonon. Täytä kaikki kentät.")
             return
-        self._data = courseservices.add_data(course, time, date)
+        self._data = courseservices.add_data(course, time, date, user_id)
         if self._data:
-            self._handle_show_summary_view()
+            self._handle_show_summary_all_view()
         else:
             self.error_message("Tietojen syöttö tietokantaan ei onnistunut.")
 

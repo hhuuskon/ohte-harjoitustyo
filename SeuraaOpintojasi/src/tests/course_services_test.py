@@ -12,5 +12,5 @@ class TestCourseServices(unittest.TestCase):
         repository.initialize_database()
 
     def test_add_data(self):
-        result = courseservices.add_data("TK20002", 4, "20.03.2022")
+        result = courseservices.add_data("TK20002", 4, "20.03.2022", 1)
         self.assertEqual(True, result)

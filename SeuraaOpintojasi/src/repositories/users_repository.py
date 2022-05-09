@@ -28,7 +28,7 @@ class UsersRepository:
         self.drop_tables()
         self.db.execute('''
         CREATE TABLE users (
-        id SERIAL PRIMARY KEY,
+        id INTEGER PRIMARY KEY,
         username TEXT UNIQUE,
         password TEXT
         );
@@ -36,7 +36,7 @@ class UsersRepository:
 
         self.db.execute('''
         CREATE TABLE courses (
-        id SERIAL PRIMARY KEY,
+        id INTEGER PRIMARY KEY,
         course TEXT,
         time INTEGER,
         date TEXT,
@@ -99,6 +99,18 @@ class UsersRepository:
         except TypeError as error:
             print(error)
             return False
+
+    def get_user_id(self, username):
+
+        try:
+
+            sql = "SELECT id FROM users WHERE username=:username"
+            result = self.db.execute(sql, {"username": username})
+            user_id = result.fetchone()
+            return user_id[0]
+
+        except TypeError as error:
+            print(error)
 
 
 repository = UsersRepository("db.db")

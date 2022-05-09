@@ -36,3 +36,5 @@
 - Toiminnallisuuksia eriytetty koodin osalta, jotta ohjelman rakenne olisi selkeämpi.
 - Testikattavuutta lisätty uusien ominaisuuksien ja eriytyksen myötä.
 - Virheviestien määrää lisätty.
+- Tietokantaan tehty muutoksia, jotta kurssien syötteet olisivat yksilöllisiä.
+- Käyttöliittymän näkymien ulkoasuja yhtenäistetty.

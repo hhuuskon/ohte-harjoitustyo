@@ -1,6 +1,6 @@
 from tkinter import ttk, constants, StringVar
 from services.course_services import courseservices
-
+from services.users_services import services
 
 class SummaryUi:
     """ Päänäkymän käyttöliittymän luokka
@@ -50,7 +50,12 @@ class SummaryUi:
             self._summary_all_click()
 
     def _summary_click(self):
-        result = courseservices.create_summary()
+        user_id = services.get_user_id()
+        result = courseservices.create_summary(user_id)
+
+        headertext = "Tässä haluamasi kooste:"
+        welcome_label = ttk.Label(master=self._frame, text=headertext)
+        welcome_label.grid(row=2, column=0)
 
         if len(result) == 0:
             self.error_message(
@@ -64,7 +69,12 @@ class SummaryUi:
             row_variable += 1
 
     def _summary_all_click(self):
-        result = courseservices.create_summary_all()
+        user_id = services.get_user_id()
+        result = courseservices.create_summary_all(user_id)
+        headertext = "Tässä kaikki syöttämäsi tiedot:"
+        welcome_label = ttk.Label(master=self._frame, text=headertext)
+        welcome_label.grid(row=2, column=0)
+
 
         if len(result) == 0:
             self.error_message(
