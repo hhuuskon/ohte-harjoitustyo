@@ -12,5 +12,18 @@ class TestCourseServices(unittest.TestCase):
         repository.initialize_database()
 
     def test_add_data(self):
-        result = courseservices.add_data("TK20002", 4, "20.03.2022", 1)
+        result = courseservices.add_data("TKT20002", 4, "20.03.2022", 1)
         self.assertEqual(True, result)
+
+    def test_create_summary(self):
+        courseservices.add_data("TKT20002", 4, "20.03.2022", 1)
+        courseservices.add_data("TKT20002", 4, "20.03.2022", 1)
+        result = courseservices.create_summary(1)
+        self.assertEqual([('TKT20002', 8)], result)
+
+    def test_create_summary_all(self):
+        courseservices.add_data("TKT20002", 4, "20.03.2022", 1)
+        courseservices.add_data("TKT20005", 10, "21.04.2022", 1)
+        result = courseservices.create_summary_all(1)
+        self.assertEqual([(1, 'TKT20002', 4, '20.03.2022', 1),
+                         (2, 'TKT20005', 10, '21.04.2022', 1)], result)

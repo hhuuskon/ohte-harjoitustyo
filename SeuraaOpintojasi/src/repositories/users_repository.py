@@ -13,8 +13,6 @@ class UsersRepository:
         self.db = sqlite3.connect(connection)
         self.db.isolation_level = None
 
-        self.initialize_database()
-
     def drop_tables(self):
         """ Poistaa olemassaolevat tietokannat
         """
@@ -98,10 +96,12 @@ class UsersRepository:
                 return True
         except TypeError as error:
             print(error)
-            return False
 
     def get_user_id(self, username):
-
+        """ Käyttän yksilöllisen tunnuksen haku, jotta tietojen haussa voidaan yksilöidä käyttäjä.
+        Args:
+            username: Käyttäjätunnus jolla käyttäjä on kirjautunut sisään
+        """
         try:
 
             sql = "SELECT id FROM users WHERE username=:username"

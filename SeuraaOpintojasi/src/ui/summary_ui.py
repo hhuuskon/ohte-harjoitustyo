@@ -2,6 +2,7 @@ from tkinter import ttk, constants, StringVar
 from services.course_services import courseservices
 from services.users_services import services
 
+
 class SummaryUi:
     """ Päänäkymän käyttöliittymän luokka
     """
@@ -74,7 +75,6 @@ class SummaryUi:
         headertext = "Tässä kaikki syöttämäsi tiedot:"
         welcome_label = ttk.Label(master=self._frame, text=headertext)
         welcome_label.grid(row=2, column=0)
-
 
         if len(result) == 0:
             self.error_message(

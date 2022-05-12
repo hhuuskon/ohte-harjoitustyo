@@ -2,7 +2,6 @@ import sqlite3
 import unittest
 from unittest import result
 from entities.users import Users
-from repositories.users_repository import UsersRepository
 from repositories.users_repository import repository
 
 
@@ -41,6 +40,6 @@ class TestUsersRepository(unittest.TestCase):
         self.assertEqual(False, result)
 
     def test_already_existing_user_db(self):
-        username = self.user.username
+        username = self.user2.username
         result = repository.existing_user_db(username)
-        self.assertEqual(False, result)
+        self.assertEqual(True, result)

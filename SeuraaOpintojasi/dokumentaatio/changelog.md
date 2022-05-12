@@ -38,3 +38,5 @@
 - Virheviestien määrää lisätty.
 - Tietokantaan tehty muutoksia, jotta kurssien syötteet olisivat yksilöllisiä.
 - Käyttöliittymän näkymien ulkoasuja yhtenäistetty.
+- Course olio lisätty mukaan toimintaan.
+- Testikattavuutta lisätty.
