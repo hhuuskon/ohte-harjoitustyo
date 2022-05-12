@@ -44,11 +44,31 @@ Sovellukseen voi lisätä päänäkymässä tietoa kuinka monta tuntia opiskelij
 Käyttäjä syöttää kurssin tunnisteen (esim. TKT20002), käytetyt tunnit numerona (esim. 4) sekä päivämäärän muodossa PP.KK.VVVV.
 Painamalla "Lisää tietokantaan" -painiketta, tiedot tallentuvat.
 
-![Lisää kurssin tiedot](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/lisaatietokantaan.png)
+![Lisää kurssin tiedot](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/lisaa_tietokantaan.png)
+
+Tämän jälkeen ohjelma näyttää kaikki syöttämäsi tiedot
+
+![Kaikki syötetyt tiedot](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kaikki_merkinnat.png)
 
 ## Koosteen luominen
 
-Käyttäjä voi luoda koosteen painamalla "Näytä kooste" -painiketta *Ominaisuus vasta tulossa*
+Käyttäjä voi luoda koosteen painamalla "Näytä kooste" -painiketta.
+
+![Näytä kooste](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/nayta_kooste.png)
+
+Tämän jälkeen käyttäjä saa koosteen syötetyistä tiedoista. Ohjelma listaa ensin syötetyn kurssin tunnisteen ja summaa kaikki siihen käytetyt tunnit yhteen.
+
+![Kooste](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kooste.png)
+
+## Kaikkien syötteiden tarkistaminen
+
+Käyttäjä voi halutessaan katsoa kaikkia syöttämiään kurssitietoja myös erikseen painamalla "Näytä kaikki merkinnät" -painiketta
+
+![Näytä kaikki merkinnät](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/nayta_kaikki_merkinnat.png)
+
+Tämän jälkeen käyttäjä saa näkyviin kaikki syöttämänsä merkinnät. Näistä näkyy käyttäjän syöttämä kurssitunniste, käytetty aika sekä päivämäärä.
+
+![Kaikki syötetyt tiedot](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kaikki_merkinnat.png)
 
 ## Uloskirjautuminen
 
