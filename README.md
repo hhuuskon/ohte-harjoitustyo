@@ -11,6 +11,7 @@ Tässä sovelluksessa opiskelija voi pitää kirjaa työajasta, jota hän on kä
 - [Changelog](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/arkkitehtuurikuvaus.md)
 - [Käyttöohje](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kayttoohje.md)
+- [Testausdokumentti](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/testausdokumentti.md)
 
 ## Asennus
 Voit asentaa tarvittavat riippuvuudet komentoriviltä komennolla:

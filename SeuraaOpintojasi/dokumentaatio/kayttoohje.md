@@ -66,7 +66,7 @@ Käyttäjä voi halutessaan katsoa kaikkia syöttämiään kurssitietoja myös e
 
 ![Näytä kaikki merkinnät](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/nayta_kaikki_merkinnat.png)
 
-Tämän jälkeen käyttäjä saa näkyviin kaikki syöttämänsä merkinnät. Näistä näkyy käyttäjän syöttämä kurssitunniste, käytetty aika sekä päivämäärä.
+Tämän jälkeen käyttäjä saa näkyviin kaikki syöttämänsä merkinnät. Näistä näkyy käyttäjän syöttämä kurssitunniste, päivämäärä sekä käytetty aika.
 
 ![Kaikki syötetyt tiedot](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kaikki_merkinnat.png)
 

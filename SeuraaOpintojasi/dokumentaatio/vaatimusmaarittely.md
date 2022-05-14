@@ -7,7 +7,7 @@ Tämä sovellus auttaa opiskelijaa pitämään kirjaa käynnissä olevien kurssi
 Sovellusta käytetään normaalina käyttäjänä. Myöhemmässä vaiheessa sovellukseen saatetaan lisätä ylläpitävän roolin ominaisuudet.
 
 ## Sovelluksen ominaisuudet:
-- Graafinen käyttöliittymä (toiminnallisuudet tehty. Vaatii hienosäätöä jotta visuaalisesti kauniimpi)
+- Graafinen käyttöliittymä (tehty)
 - Käyttäjä voi luoda järjestelmään käyttäjätunnuksen haluamallaan nimimerkillä (tehty)
 - Käyttäjä voi kirjautua sisään sovellukseen (tehty)
 - Käyttäjä voi syöttää järjestelmään kurssin tunnisteen, päivämäärän ja käytetyn ajan. Nämä tiedot tallennetaan tietokantaan. (tehty)

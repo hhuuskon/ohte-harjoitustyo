@@ -23,4 +23,4 @@
 - 07.05.2022 | Koosteen toiminnallisuuksien parantaminen ja niiden näkyvyys sekä muotoilu käyttöliittymässä lisätty. 3h
 - 09.05.2022 | Tietokantaan ja ohjelmaan tehty parannuksia, jotta syötetyn datan koosteet näkyisi vain sille käyttäjälle joka on ne syöttänyt. 2h
 - 12.05.2022 | Pylint virheiden poistamista. Course olion käyttöönotto. Testikattavuuden lisääminen. 2h
-### Yhteensä: 74h
+### Yhteensä: 76h
