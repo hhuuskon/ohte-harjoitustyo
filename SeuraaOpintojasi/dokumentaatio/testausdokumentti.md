@@ -18,7 +18,7 @@
 
 - Testikattavuus tässä lopullisessa versiossa on coverage-reportin mukaan 84%. Alla olevasta kuvasta selviää tarkempi prosentuaalinen jakauma. Testeihin ei ole sisällytetty käyttöliittymän testaamista.
 
-![Coverage-Report](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/coverage-final.png)
+![Coverage-Report](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/coverage_final.png)
 
 ### Käyttöliittymän ja järjestelmän testaus
 

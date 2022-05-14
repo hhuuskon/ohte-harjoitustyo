@@ -9,6 +9,7 @@ class Course:
             course: Kussin tunniste jonka käyttäjä syöttää
             time: Kurssiin käytetty aika jonka käyttäjä syöttää
             date: Käytetyn ajan päivämäärä jonka käyttäjä syöttää
+            user_id: Käyttäjän yksilöivä numero
         """
         self.course = course
         self.time = time
