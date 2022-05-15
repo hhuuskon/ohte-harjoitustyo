@@ -11,7 +11,7 @@ Ohjelman pakkausrakenne on kuvattu alla olevassa kuvassa ja sen pakkaukset sisä
 
 ## Käyttöliittymä
 
-Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää neljä erilaista näkymää:
+Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää viisi erilaista näkymää:
 
 - Sisäänkirjautuminen
 
@@ -23,11 +23,15 @@ Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää neljä eri
 
 - Päätoiminnallisuus jossa tietoa voi lisätä
 
-![Päänäkymä](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/lisaatietokantaan.png)
+![Päänäkymä](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/nayta_kooste.png)
 
-- Koostenäkymä
+- Koostenäkymä yhteenlasketuista tunneista
 
-*Tulossa*
+![Koostenäkymä](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kooste.png)
+
+- Yhteenveto kaikista käyttäjän tekemistä merkinnöistä
+
+![Kaikkinäkymä](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kaikki_merkinnat.png)
 
 ## Tiedon tallennus
 
@@ -96,6 +100,8 @@ Käyttöliittymä kutsuu ```UsersServices``` sisällä olevaa sign_up metodia pa
 
 ### Kurssiin käytetyn ajan lisääminen
 
+Käyttäjä syöttää ohjelman käyttöliittymän päänäkymään tietoja joilla hän voi pitää kirjaa kursseihin käytetystä työajasta. Käyttäjä syöttää kurssin tunnisteen, tuntimäärän jota työhön on käytetty ja päivämäärän jolloin työ on tehty. Tämän jälkeen sovellus noudattaa seuraavanlaista toimintaa:
+
 ```mermaid
 sequenceDiagram
     participant User
@@ -118,5 +124,31 @@ sequenceDiagram
     CourseServices-->>UI: True
     UI->>UI: handle_show_summary_all_view()
 ```
+Käyttöliittymä kutsuu ```UsersServices``` sisällä olevaa get_user_id metodia hakeakseen käyttäjän ysilöivät id-numeron, jotta tietokantaan syötettävästä tiedosta saadaan myöhemmin käyttäjäkohtainen. Tämän jälkeen kutsutaan ```UsersRepository```:n sisällä olevaa metodia get_user_id jolle annetaan parametrina käyttäjän sisäänkirjautumisen yhteydessä tallennettu user olion sisältämä username. Käyttäjän yksilöivä id-numero haetaan tietokannasta ja palautetaan käyttöliittymälle. Käyttöliittymä kutsuu ```CourseServices``` sisällä olevaa add_data metodia parametreina käyttäjän syöttämä kurssin tunnus, käytetty aika, päivämäärä ja aikaisemin haettu käyttäjän yksilöivä id-numero. Tämän jälkeen samat tiedot välitetään ```Course``` luokalle joka tekee kurssista yksittäisen ilmentymän. Ilmentymä palautetaan course_entry muodossa ```CourseServices``` -luokalle. Course_entry -olio lähetetään nyt ```UsersRepository```:n sisällä olevaan metodiin add_data_db joka lisää tiedot tietokannan ```courses``` -tauluun. Onnistuneen lisäyksen päätteeksi käyttöliittymä vaihdetaan näkymään, jossa käyttäjä näkee kaikki sen hetkiset syöttämänsä tiedot.
+
 
 ### Koosteen luominen
+
+Käyttäjä voi päänäkymästä luoda kaksi erilaista koostetta. Näytä kooste -painikkeesta käyttäjä näkee yhteenvedon jossa esitetään kurssin tunnus ja siihen käytetty aika. Jos samalla kurssin tunnuksella löytyy tietokannasta useita merkintöjä laskee ohjelma ne yhteen ja esittää summatun ajankäytön käyttäjälle. Näytä kaikki merkinnät -painikkeesta käyttäjä näkee kaikki sen hetkiset syöttämänsä tiedot. Tämä näkymä on sama, johon käyttäjä päätyy syötettyään ohjelmaan kurssin tietoja onnistuneesti. Sovellus noudattaa molemmissa koosteissa seuraavanlaista toimintaa:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI
+    participant CourseServices
+    participant CourseRepository
+    User->>UI: Get summary_type
+    UI->>UsersServices: get_user_id()
+    UsersServices->>UsersRepository: get_user_id(user.username)
+    UsersRepository-->>UsersServices: user_id
+    UsersServices-->>UI: user_id
+    UI->>CourseServices: create_summary/create_summary_all(user_id)
+    CourseServices->>CourseRepository: summary_courses_db/summary_all_courses_db(user_id)
+    CourseRepository-->>CourseServices: summary
+    CourseServices-->>UI: summary
+    UI->>UI: handle_show_summary_view/handle_show_summary_all_view()
+```
+
+
+
+
