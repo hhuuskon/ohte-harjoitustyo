@@ -25,4 +25,5 @@
 - 12.05.2022 | Pylint virheiden poistamista. Course olion käyttöönotto. Testikattavuuden lisääminen. 2h
 - 12.05.2022 | Käyttöohjeen ja sen kuvien päivitys vastaamaan nykyisiä ominaisuuksia. 1h
 - 14.05.2022 | Testausdokumentin kirjoittaminen ja sen lisääminen osaksi dokumentaatiota. 2h
-### Yhteensä: 79h
+- 15.05.2022 | Arkkitehtuurikuvaus päivitetty ja lisätty mermaid työkalulla kaaviot. 4h
+### Yhteensä: 83h

@@ -51,7 +51,7 @@ Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää viisi eril
 
 ## Sovelluslogiikka
 
-Sovelluksessa on kaksi luokkaa jotka kuvaavat rekisteröityneitä käyttäjiä tai käyttäjän syöttämiä kurssin tietoja.
+Sovelluksessa on kaksi luokkaa jotka kuvaavat rekisteröityneitä käyttäjiä tai käyttäjän syöttämiä kurssin tietoja:
 
 ```mermaid
 classDiagram
@@ -63,6 +63,8 @@ Course : user_id
 Users : username
 Users : password
 ```
+
+
 
 
 ## Tiedon tallennus
@@ -181,3 +183,7 @@ sequenceDiagram
     UI->>UI: handle_show_summary_view/handle_show_summary_all_view()
 ```
 Käyttöliittymä kutsuu ```UsersServices``` sisällä olevaa get_user_id metodia hakeakseen käyttäjän ysilöivät id-numeron, jotta tietokannasta myöhemmin haettava tieto on käyttäjän itsensä syöttämää. Tämän jälkeen kutsutaan ```UsersRepository```:n sisällä olevaa metodia get_user_id jolle annetaan parametrina käyttäjän sisäänkirjautumisen yhteydessä tallennettu user olion sisältämä username. Käyttäjän yksilöivä id-numero haetaan tietokannasta ```users``` -taulusta ja palautetaan käyttöliittymälle. Käyttöliittymä kutsuu ```CourseServices``` sisällä olevaa create_summay tai create_summary_all -metodia riippuen siitä, kumman koosteen käyttäjä on valinnut, parametrinaan käyttäjä yksilöivä id-numero. Tämän jälkeen kutsutaan ```CourseRepository```:n sisällä olevaa metodia summary_courses_db tai summary_all_courses_db parametrina käyttäjän yksilöivä id-numero. Kooste haetaan tietokannan taulusta ```courses```. Tässä vaiheessa palautettavan summary tiedon sisältö riippuu siitä kumman koosteen käyttäjä on valinnut. Summary sisältää kurssin tunnisteen sekä tunteihin käytetyn ajan summan, jos merkintöjä samalla kurssitunnisteella on tehty useampia. Summary_all sisältää kaikki käyttäjän syöttämät tiedot eli kurssin tunnisteen, kurssiin käytetyn yksilöllisen ajan ja työn päivämäärän. Tämän jälkeen käyttöliittymä esittää käyttäjän valitseman yhteenveto näkymän tai kaikkien syötteiden näkymän.
+
+## Ohjelman heikkoudet koodin laadussa
+
+- Käyttöliittymä sisältää toisteista koodia. Laadun testaamisessa käyttöliittymän koodi on jätetty pois.

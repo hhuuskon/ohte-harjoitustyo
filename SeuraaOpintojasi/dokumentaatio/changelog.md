@@ -40,4 +40,4 @@
 - Käyttöliittymän näkymien ulkoasuja yhtenäistetty.
 - Course olio lisätty mukaan toimintaan.
 - Testikattavuutta lisätty.
-- Dokumentaatioon lisätty testausdokumentti, lopulliset käyttöohjeet laadittu.
+- Dokumentaatioon lisätty testausdokumentti, lopulliset käyttöohjeet laadittu sekä arkkitehtuurikuvaus on päivitetty käyttäen mermaid työkalua kaavioihin.
