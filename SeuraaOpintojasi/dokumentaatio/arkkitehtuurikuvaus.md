@@ -54,7 +54,19 @@ Kurssin suorituksiin liittyvien tietojen tallentamiseen käytetään ```courses`
 
 ### Sisäänkirjautuminen
 
-![Sekvenssikaavio](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/sekvenssikaavio.png)
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI
+    participant UsersServices
+    participant UsersRepository
+    User->>UI: Login Credentials
+    UI->>UsersServices: login(username, password)
+    UsersServices->>UsersRepository: login_db(username, password)
+    UsersRepository-->>UsersServices: False/True
+    UsersServices-->>UI: False/True
+    UI->>UI: if True handle_show_tracking_view()
+```
 
 ### Uuden käyttäjän luominen
 
@@ -64,11 +76,11 @@ sequenceDiagram
     participant UI
     participant UsersServices
     participant UsersRepository
-    User-->UI: New Username and Password
-    UI-->UsersServices: sign_up(username, password)
-    UsersServices-->UsersRepository: existing_user_db(username)
+    User->>UI: New Username and Password
+    UI->>UsersServices: sign_up(username, password)
+    UsersServices->>UsersRepository: existing_user_db(username)
     UsersRepository-->>UsersServices: False
-    UsersServices-->UsersRepository: sign_up_db(username, password)
+    UsersServices->>UsersRepository: sign_up_db(username, password)
     UsersRepository-->>UsersServices: True
     UsersServices-->>UI: True
     UI->>UI: handle_show_tracking_view()
