@@ -6,6 +6,7 @@ Tässä sovelluksessa opiskelija voi pitää kirjaa työajasta, jota hän on kä
 ## Dokumentaatio
 - [Ensimmäinen release](https://github.com/hhuuskon/ohte-harjoitustyo/releases/tag/viikko5)
 - [Toinen release](https://github.com/hhuuskon/ohte-harjoitustyo/releases/tag/viikko6)
+- [Loppupalautus -release](https://github.com/hhuuskon/ohte-harjoitustyo/releases/tag/loppupalautus)
 - [Vaatimusmäärittely](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/tyoaikakirjanpito.md)
 - [Changelog](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/changelog.md)
