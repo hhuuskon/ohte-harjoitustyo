@@ -7,6 +7,21 @@ Ohjelman pakkausrakenne on kuvattu alla olevassa kuvassa ja sen pakkaukset sisä
 - Services sisältää sovelluslogiikan
 - Repositories sisältää tiedon tallennuksen tietokantoihin
 
+```mermaid
+classDiagram
+UI --> SERVICES
+SERVICES --> REPOSITORIES
+SERVICES --> ENTITIES
+REPOSITORIES --> ENTITIES
+UI : User Interface
+SERVICES : int UsersServices
+SERVICES : int CourseServices
+REPOSITORIES : int UsersRepository
+REPOSITORIES : int CourseRepository
+ENTITIES : Users
+ENTITIES : Course
+```
+
 ![Pakkausrakenne](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/pakkauskaavio.png)
 
 ## Käyttöliittymä
