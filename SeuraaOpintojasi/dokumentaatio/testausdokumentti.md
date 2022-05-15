@@ -28,6 +28,8 @@
 
 ### Sovelluksen laatuongelmat
 
-- Sovelluksen tietokanta alustetaan, kuin testit ajetaan läpi. Tämä johtuu siitä, koska sovelluksen toimintaperiaatetta muttettiin vastaamaan saatua palautetta, jotta tietokanta olisi myös pysyvä ohjelman sammutettua, eikä vain yhden käyttökerran aikana. Tämä on hyvä huomioida sovellusta testattaessa.
+- Sovelluksen tietokanta alustetaan, kuin testit ajetaan läpi. Tämä johtuu siitä, koska sovelluksen toimintaperiaatetta muttettiin vastaamaan saatua palautetta, jotta tietokanta olisi myös pysyvä ohjelman sammutettua, eikä vain yhden käyttökerran aikana. Tämä on hyvä huomioida sovellusta testattaessa. Tämän voisi korjata tulevaisuudessa tekemällä ominaisuuden, jossa käyttäjä voisi erillisellä tiedostolla määritellä tietokannan nimen.
 
-- Osa Pylint virheistä tulee yksinkertaisesti vain siitä, että tietokanta on nimetty koodiin eikä siinä voida käyttää Pylintin vaatimaa "snake case" formaattia.
+- Koodista kommentoitu kolme Pylint virhettä pois joita näytti olevan mahdoton korjata.
+- CourseRepository ja UsersRepository luokissa ohitettu virhe, jossa Pylint ilmoittaa tietokannan nimen olevan väärin muotoiltu. Tämän nimen muoto oli pakko olla db.db. Attribute name "db" doesn't conform to snake_case naming style (invalid-name)
+- CoureRepository luokassa ohitettu virhe, jossa rivi on liian pitkä vaikka se on jo kertaalleen jaettu kahdelle riville. Rivin katkaiseminen ei onnistunut samalla tavalla, kun normaalisti tai SQL kyselyssä. Line too long (140/100) (line-too-long)

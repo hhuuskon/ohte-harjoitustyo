@@ -10,7 +10,7 @@ class UsersRepository:
         Args:
         conncetion: Tietokantayhteyden luominen
         """
-        self.db = sqlite3.connect(connection)
+        self.db = sqlite3.connect(connection) # pylint: disable=invalid-name
         self.db.isolation_level = None
 
     def drop_tables(self):

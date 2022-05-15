@@ -5,7 +5,7 @@ class CourseRepository:
 
     def __init__(self, connection):
 
-        self.db = sqlite3.connect(connection)
+        self.db = sqlite3.connect(connection) # pylint: disable=invalid-name
         self.db.isolation_level = None
 
     def add_data_db(self, course_entry):
@@ -19,7 +19,7 @@ class CourseRepository:
             sql = "INSERT INTO courses (course, time, date, user_id) "\
                 "VALUES (:course,:time,:date,:user_id)"
             self.db.execute(
-                sql, {"course": course_entry.course, "time": course_entry.time, "date": course_entry.date, "user_id": course_entry.user_id})
+                sql, {"course": course_entry.course, "time": course_entry.time, "date": course_entry.date, "user_id": course_entry.user_id}) # pylint: disable=line-too-long
             self.db.commit()
         except TypeError as error:
             print(error)
