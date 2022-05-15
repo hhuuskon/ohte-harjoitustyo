@@ -111,7 +111,7 @@ sequenceDiagram
     UsersRepository-->>UsersServices: user_id
     UsersServices-->>UI: user_id
     UI->>CourseServices: add_data(course, time, date, user_id)
-    CourseServices->>Course(course, time, date, user_id)
+    CourseServices->>Course: course, time, date, user_id
     Course-->>CourseServices: course_entry
     CourseServices->>CourseRepository: add_data_db(course_entry)
     CourseRepository-->>CourseServices: True
