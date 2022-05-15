@@ -6,6 +6,7 @@ Ohjelman pakkausrakenne on kuvattu alla olevassa kuvassa ja sen pakkaukset sisä
 - UI sisältää käyttöliittymän
 - Services sisältää sovelluslogiikan
 - Repositories sisältää tiedon tallennuksen tietokantoihin
+- Entities sisältää käyttäjän tai kurssin yksittäiset ilmentymät
 
 ```mermaid
 classDiagram
@@ -14,15 +15,14 @@ SERVICES --> REPOSITORIES
 SERVICES --> ENTITIES
 REPOSITORIES --> ENTITIES
 UI : User Interface
-SERVICES : int UsersServices
-SERVICES : int CourseServices
-REPOSITORIES : int UsersRepository
-REPOSITORIES : int CourseRepository
+SERVICES : UsersServices
+SERVICES : CourseServices
+REPOSITORIES : UsersRepository
+REPOSITORIES : CourseRepository
 ENTITIES : Users
 ENTITIES : Course
 ```
 
-![Pakkausrakenne](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/pakkauskaavio.png)
 
 ## Käyttöliittymä
 
@@ -47,6 +47,23 @@ Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää viisi eril
 - Yhteenveto kaikista käyttäjän tekemistä merkinnöistä
 
 ![Kaikkinäkymä](https://github.com/hhuuskon/ohte-harjoitustyo/blob/master/SeuraaOpintojasi/dokumentaatio/kuvat/kaikki_merkinnat.png)
+
+
+## Sovelluslogiikka
+
+Sovelluksessa on kaksi luokkaa jotka kuvaavat rekisteröityneitä käyttäjiä tai käyttäjän syöttämiä kurssin tietoja.
+
+```mermaid
+Course
+Users
+Course : course
+Course : time
+Course : date
+Course : user_id
+Users : username
+Users : password
+```
+
 
 ## Tiedon tallennus
 
