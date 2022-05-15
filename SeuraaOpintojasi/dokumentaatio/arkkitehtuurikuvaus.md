@@ -54,8 +54,6 @@ Käyttöliittymä on rakennettu tkinter kirjastolla ja se sisältää viisi eril
 Sovelluksessa on kaksi luokkaa jotka kuvaavat rekisteröityneitä käyttäjiä tai käyttäjän syöttämiä kurssin tietoja.
 
 ```mermaid
-Course
-Users
 Course : course
 Course : time
 Course : date
