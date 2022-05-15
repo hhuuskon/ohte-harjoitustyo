@@ -40,3 +40,4 @@
 - Käyttöliittymän näkymien ulkoasuja yhtenäistetty.
 - Course olio lisätty mukaan toimintaan.
 - Testikattavuutta lisätty.
+- Dokumentaatioon lisätty testausdokumentti, lopulliset käyttöohjeet laadittu.
