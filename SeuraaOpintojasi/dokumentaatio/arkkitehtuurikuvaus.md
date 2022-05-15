@@ -54,6 +54,8 @@ Kurssin suorituksiin liittyvien tietojen tallentamiseen käytetään ```courses`
 
 ### Sisäänkirjautuminen
 
+Jos käyttäjällä on jo olemassa olevat tunnukset, syöttää hän ne graafisen käyttöliittymän sisäänkirjautumis ikkunaan. Tämän jälkeen sovellus noudattaa seuraavanlaista toimintaa:
+
 ```mermaid
 sequenceDiagram
     participant User
@@ -68,7 +70,11 @@ sequenceDiagram
     UI->>UI: if True handle_show_tracking_view()
 ```
 
+Käyttöliittymä kutsuu ```UsersServices``` sisällä olevaa login metodia parametreina käyttäjän syöttämä käyttäjätunnus ja salasana. Tämän jälkeen kutsutaan ```UsersRepository```:n sisällä olevaa metodia login_db jolle annetaan edelleen samat käyttäjän syöttämä käyttäjätunnus ja salasana. Tämän jälkeen login_db metodi tarkistaa löytyykö tämän niminen käyttäjä tietokannan ```users``` -taulusta. Jos käyttäjää ei löydy tai salasana on väärä palauttaa login_db metodi False. Jos tunnus ja salasana vastaavat tietokannasta löytyvää tietoa palauttaa metodi True. Onnistuneen sisäänkirjautumisen johdosta käyttöliittymän näkymä vaihdetaan päänäkymään. Jos kirjautumistiedot eivät ole oiken saa käyttäjä siitä virheilmoituksen sisäänkirjautumisnäkymässä.
+
 ### Uuden käyttäjän luominen
+
+Jos käyttäjällä ei ole olemassa tunnuksia, syöttää hän ne graafisen käyttöliittymän ikkunaan joka on tarkoitettu uusien tunnusten luomiseen. Tämän jälkeen sovellus noudattaa seuraavanlaista toimintaa:
 
 ```mermaid
 sequenceDiagram
@@ -86,6 +92,31 @@ sequenceDiagram
     UI->>UI: handle_show_tracking_view()
 ```
 
-### Tietojen lisääminen
+Käyttöliittymä kutsuu ```UsersServices``` sisällä olevaa sign_up metodia parametreina käyttäjän syöttämä uusi käyttäjätunnus ja salasana. Tämän jälkeen kutsutaan ```UsersRepository```:n sisällä olevaa metodia sign_up_db jolle annetaan edelleen samat käyttäjän syöttämä uusi käyttäjätunnus ja salasana. Tämän jälkeen sign_up_db metodi tarkistaa löytyykö tämän niminen käyttäjä tietokannan ```users``` -taulusta. Jos tämän nimistä käyttäjää ei vielä ole olemassa, tallennetaan tiedot kyseiseen tauluun tietokantaan ja metodi palauttaa True. Jos tämän nimiminen käyttäjä jo löytyy palauttaa metodi False. Onnistuneen käyttäjätunnuksen luomisen jälkeen ohjelma kirjaa uuden käyttäjän automaattisesti sisään ja käyttöliittymän näkymä vaihdetaan päänäkymään. Jos käyttäjätunnus sattuisi jo olemaan käytössä saa käyttäjä siitä geneerisen virheilmoituksen. Tämä estää myös osakseen jo olemassa olevien käyttäjätunnusten kalastelemisen tietokannasta.
+
+### Kurssiin käytetyn ajan lisääminen
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI
+    participant CourseServices
+    participant UsersServices
+    participant CourseRepository
+    participant UsersRepository
+    participant Course
+    User->>UI: Course information
+    UI->>UsersServices: get_user_id()
+    UsersServices->>UsersRepository: get_user_id(user.username)
+    UsersRepository-->>UsersServices: user_id
+    UsersServices-->>UI: user_id
+    UI->>CourseServices: add_data(course, time, date, user_id)
+    CourseServices->>Course(course, time, date, user_id)
+    Course-->>CourseServices: course_entry
+    CourseServices->>CourseRepository: add_data_db(course_entry)
+    CourseRepository-->>CourseServices: True
+    CourseServices-->>UI: True
+    UI->>UI: handle_show_summary_all_view()
+```
 
 ### Koosteen luominen
