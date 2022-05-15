@@ -55,8 +55,7 @@ Sovelluksessa on kaksi luokkaa jotka kuvaavat rekisteröityneitä käyttäjiä t
 
 ```mermaid
 classDiagram
-Course
-Users
+Course .. Users
 Course : course
 Course : time
 Course : date
